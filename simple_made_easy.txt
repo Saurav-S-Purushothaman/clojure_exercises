@@ -1,0 +1,79 @@
+simplicity is the prerequisite for reliability
+simple - one fold/twist
+complex - folded together, braided together
+
+Easy - lie near
+
+Simple 
+------
+One braid 
+  One role
+  One task
+  One concept
+  One dimension
+
+But not
+  One instance
+  one operation
+
+Easy
+---
+Near, at hand
+ on our hard drive, in our tool set, ide, apt
+Near to our 
+ understanding/skill set
+ familiar
+
+Construct vs Artifact.
+We focus on experience of use of construct
+  programmer convenience
+  programmer replaceability
+
+We must assess construct by their artifact.
+
+Limits 
+ We can only hope to make reliable those things we can understand.
+ intertwining of things will gonna limit of capacity to understand the system 
+
+Whats true about all the bugs in the field.
+It passed the type checker
+it passed all the tests
+
+Your ability to reason about your program is critical to debugging.
+
+Development Speed
+-------------------
+Ignore complexity, will slow you down over the long haul
+On throwaway or trivial projects, nothing really matters.
+
+You have to think simplicity of the problem first. 
+
+simplicity
+-----------
+Ease of understanding
+ease of change
+easier debugging
+Flexibility
+ policy
+ location(move things around)
+
+Make things Easy
+--------------
+To make things easy is learning experience, trying, being familiar with one thing 
+Mental capability part?
+We can learn more things but not be smart.
+  not going to move very far 
+  make things near by simplifying them 
+  
+Parens are Hard!
+-----------
+Not at hand for most people 
+Nor familiar
+But are they simple 
+Not in CL/Scheme
+  overloaded for calls and grouping
+  for those that bothered trying, this is a valid complexity complaint
+  Adding a data structure for grouping,eg. Vectors
+    minimal effort can them make them easy too.
+
+
