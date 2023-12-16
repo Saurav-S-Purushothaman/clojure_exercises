@@ -245,6 +245,7 @@
 ;; if its set to continue, we can add set-error-handler! function to handle the error.
 ;; no need to restart the agent.
 ;; set-error-handler takes two args, the agent and the error message
+
 (def who-agent (agent :caterpillar))
 
 (set-error-mode! who-agent :continue)
@@ -258,6 +259,8 @@
 ;; with these pre setup ready, lets try to throw error to the agent one more time 
 
 ;; what are the actual use of agent.
-;; logging messages to file. sending message/instruction to robot
+
+
+
 
 
