@@ -76,12 +76,39 @@
 (who-are-you 112) ;; returns "You are a long"
 (who-are-you 1.2) ;; returns "I don't know who you are"
 
+;; we can experss the same thing using multimethod.
+;; first we need to specify the multi method and then we need to create function to dispatch the method. 
+
+;; (defmulti name dispatch-fn) -> based on the dispatch function we can create different methods
+(defmulti who class) 
+
+;; this is how you create a method
+;; (defmethod name match
+;;  [args]
+;;  )
+
+(defmethod who java.lang.String [args]
+  (str "You are string" args))
 
 
+(defmethod who clojure.lang.Keyword [args]
+  (str "You are keyword" args))
+
+(defmethod who java.lang.Long [args]
+  (str "You are long" args))
 
 
+(who :alice) ;; returns "You are a keyword"
+(who "Alcie") ;; returns "You are string"
+(who 112) ;; returns "You are a long"
+;; (who 1.2) ;; returns error
 
+;; so inorder to avoid error, we can use default input value in the method
 
+(defmethod who :default [args]
+  (str "I don't know who you are." args))
+
+(who 1.2)
 
 
 
