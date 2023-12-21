@@ -7,6 +7,11 @@
   [x]
   (println x "Hello, World!"))
 
+(defn talk 
+  [args]
+  (csk/->snake_case args))
+
+
 (def hello (csk/->snake_case "hello world"))
 
 (def counter (ref 0))
@@ -33,4 +38,15 @@
   (future (dotimes [_ n] (transfer 200))))
 
 (str "The value of account 1 is " @account1 " and the value of account 2 is " @account2)
+
+(defn binary-search [arr target] 
+  (loop [left 0 right (count arr)]
+    (if (<= left right) -1
+      (let [mid (/ (+ left right) 2) mid-val (nth arr mid)]
+        (cond (= mid-val target) mid (> mid-val target) (recur left (dec mid-val)) 
+              :else (recur (inc mid-val) right))))))
+
+
+(defn -main [& args]
+  (println (talk (first args))))
 

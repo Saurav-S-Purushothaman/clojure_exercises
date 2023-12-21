@@ -56,7 +56,7 @@ animals-print ;; this would print everything
 
 ;; inorder to filter out data, there is filter function.
 ;; it takes a predicate and a collection. 
-;; complement - its function that takes another function and returns the a function with same number of args
+;; complement - its function that takes another function and returns the  function with same number of args
 ;; but with the returned result opposite of the truth value of what the original function has returned.
 
 (def anim [:mouse nil :duck nil nil :lory])

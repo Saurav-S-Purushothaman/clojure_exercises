@@ -3,11 +3,9 @@
   "Binary-Search algorithm implemented in clojure"
   [arr target]
     (loop [left 0 right (count arr)]
-      (if (>= left right) nil 
+      (if (>= left right) -1 
         (let [mid (/ (+ left right) 2)]
-          (cond
-            (= target (nth arr mid)) mid
-            (> target (nth arr mid)) (recur (inc mid) right)
+          (cond (= target (nth arr mid)) mid (> target (nth arr mid)) (recur (inc mid) right)
             :else (recur left (dec mid)))))))
 
 (def vecs [1 2 3 4 5 6])

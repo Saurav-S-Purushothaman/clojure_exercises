@@ -1,1 +1,1 @@
-["^ ","~$binary-search",["^ ","~:row",2,"~:col",1,"~:fixed-arities",["~#set",[2]],"~:name","^0","~:ns","~$user","~:top-ns",null,"~:type","~:fn"],"~$vecs",["^ ","^1",13,"^2",1,"^5","^;","^6","^7","^8",null,"^9","~:vector"],"~$x",["^ ","^1",14,"^2",1,"^5","~$x","^6","^7","^8",null],"~:filename","/home/saurav/clojure/binary-search.clj"]
+["^ ","~$digital-root",["^ ","~:row",1,"~:col",1,"~:fixed-arities",["~#set",[1]],"~:name","^0","~:ns","~$user","~:top-ns",null,"~:type","~:fn"],"~:filename","/home/saurav/clojure/codewars/digital-root.clj"]
