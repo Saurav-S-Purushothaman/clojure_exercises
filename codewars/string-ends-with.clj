@@ -13,7 +13,7 @@
   (cond
     ;; if the length of first string is greater than second, then no need to compare
     (> (count ending) (count strng)) false 
-    ;; converting each string to vector and checking if the last element 
+    ;; converting each string to vector and checking if the last element ar same 
     (= ( string-to-vec ending) 
        (-> strng 
            (string-to-vec)
