@@ -49,4 +49,3 @@
 
 (defn -main [& args]
   (println (talk (first args))))
-
