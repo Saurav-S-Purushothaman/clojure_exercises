@@ -38,6 +38,7 @@
 ;; we can also use them by importing. 
 ;; for eg. 
 (.getHostName (java.net.InetAddress/getByName "localhost"))
+;; here java.net.InetAddress is a class 
 
 ;; doto macro 
 
@@ -51,6 +52,8 @@
 ;; if we need to mutate a java object in a series of steps, then we can use this
 (def sb (doto (StringBuffer. "Who") (.append " are") (.append " you?")))
 (str sb)
+
+
 
 ;; doto syntax is much nicer and easier to read.
 (def sb2 (.append (.append (StringBuffer. "Who") "Are") "You"))

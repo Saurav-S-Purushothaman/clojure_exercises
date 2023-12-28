@@ -1,8 +1,12 @@
-(def print-hello 
-  #(println "Hello " %))
+(println "Hello world")
+(Thread/sleep 1000)
+(println "hello world again")
 
-(def print-hello2 (fn [args] 
-    (println "hello " args)))
-
-(let [n 4]
-  (println n))
+;; this was an interesting program.
+(defn say-hello-ten-times[]
+  (loop [counter 0]
+    (when (< counter 10)
+      (do 
+        (println "INFO: Try number = " counter)
+        (Thread/sleep 2000)
+        (recur (inc counter))))))
