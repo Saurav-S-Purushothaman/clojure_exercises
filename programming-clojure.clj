@@ -87,7 +87,6 @@
 ;; namespace. 
 ;; best way to switch namespace is by using the command
 ;; (in-ns namespace-name)
-(in-ns 'myapp)
 ;; when you are in new namespace always use this
 
 (clojure.core/use 'clojure.core)
@@ -104,11 +103,11 @@
 ;; syntax (import ('package class1 class2 ...))
 
 ;; different type of requre statement
-(require 'clojure.string)
+;; (require 'clojure.string)
 ;; even if you import using this statement, you are still required to use 
 ;; the fully qualified name of the underlying methods of this namespace. 
 ;; one way to avoid that is to use alias
-(require ['clojure.string :as str])
+;; (require ['clojure.string :as str])
 ;; now you may use the alias to use the functions of clojure.string.
 ;; it is common practice to set namespace using ns command.
 ;; then use the additional :import, :require and :use commands to 
@@ -119,4 +118,29 @@
 ;;   (:require ['clojure.string :as str])
 ;;   (:import (java.io File )))
 
+;; metadata
+;; a person without metadata.
+(def perso {:name "John" :age 20})
 
+;; a person with metadata. 
+;; (def person-with 
+;;   ^{:source Database} {:name "Saurav" :age 24})
+
+(def person-with-metadata 
+  ^{:source "Database"} {:name "John" :age 30})
+
+;; trailing dot to create an instance of the object. 
+(def rnd (java.util.Random.))
+
+;; use leading dot to create invoke method or fields of the instance. 
+(def nextInt (. rnd nextInt 10))
+;; this can be also written in this way which is more concise.
+(def nextInt2 (.nextInt rnd 10))
+
+;; remember this syntax. It will be helpful
+;; (.method instance & args)
+;; (.field instance)
+;; (.-field instance)
+;; (Class/method & args)
+;; Class/field
+(java.util.Random/nextInt 10)

@@ -8,4 +8,4 @@
     (let [sum (check-sum numbers)]
       (if (= (count sum) 1) (Integer/parseInt sum)(recur sum)))))
 
-
+(- 237000 90000)
