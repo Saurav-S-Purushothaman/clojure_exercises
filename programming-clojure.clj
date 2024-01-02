@@ -143,4 +143,30 @@
 ;; (.-field instance)
 ;; (Class/method & args)
 ;; Class/field
-(java.util.Random/nextInt 10)
+;; (java.util.Random/nextInt 10)
+
+;; always remember for static method 
+;; use (class/method args)
+;; for instance method, use (.method instance args)
+;; as simple as that.
+
+;; if you want wrap around a code in clojure, then
+;; use comment macro
+;; there is also a read macro in clojure.
+
+(defn tripple [number]
+  #_(println "Tripples the number")
+  (* number 3))
+
+;; if you want to add some side effects in flow control
+;; then use do.
+
+;; demonstrating recur without loop
+
+(defn countdown 
+  "Creates a countdown for givern args" 
+  [result x]
+  (if (= x 0) result
+    (recur (conj result x) (dec x))))
+
+

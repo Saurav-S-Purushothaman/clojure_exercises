@@ -55,3 +55,8 @@
 
 ;; NOTE: Always use recur for recursion because its Tail Call Optmized(TCO) by clojure 
 
+;; iterate function in clojure. 
+;; its used to generate infinite sequence by repititively 
+;; applying function to its starting value 
+;; syntax -> (iterate function starting-value)
+;
