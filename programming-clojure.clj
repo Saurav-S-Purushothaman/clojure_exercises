@@ -211,9 +211,75 @@
 ;; for vectors it adds the element at the back.o
 
 ;; iterate functions begings with a value x and continues forever.
+;; iterate begins with element and continues forever to apply the function f
+;; (iterate f x) 
 
+(take 10 (iterate inc 2))
 
+;; cycle function takes a collection and cycles it infinitely. 
+;; I have feeling that we can achieve for loop using cycle. I dunno. 
 
+(range 3)
+(take 10 (cycle (range 3)))
+
+;; interleave is an interesting function. It takes two collections and 
+;; cycles through each element of the collection (first collectino and 
+;; then second collection until one collection is exhausted)
+
+(interleave [:a :b :c :d] [1 2 3 4 5 6 7])
+
+;; another interesting function is interpose. 
+(def separator ",")
+(def Coll [1 2 3 4])
+(interpose separator Coll)
+ ;; returns (1 "," 2 "," 3 "," 4)
+
+(apply str (interpose separator Coll))
+;; isntead of this, you can use clojure.string/join
+
+(require '[clojure.string :refer [join]])
+(join \, [:apple :banana])
+
+(type (set (hash-set 1 2 3 4)) )
+
+;; take-while is interesting, 
+;; a while loop takes applies the return boolean function until its true
+(def vowels? #{\a\e\i\o\u})
+(def constants? (complement vowels?))
+
+(take-while constants? "This is a great book")
+;; returns (\T \h)
+
+;; drop while is exact opposite of take-while. 
+(drop-while constants? "This is a great book")
+;; returns the rest of the string in character until constant? returns false
+
+;; split-at and split-with 
+(split-at 5 (range 10))
+;; returns [(0 1 2 3 4) (5 6 7 8 9)]
+(split-with #(< % 10) [1 2 10 1 2 3 3 30 123 123 1 2 3 ])
+;; returns [(1 2) (10 1 2 3 3 30 123 123 1 2 3)]
+
+;; sequence predicate, 
+;; sequence predicate ask how some other predicate apply to this predicate
+(every? odd? [1 2 3 4 4])
+(some odd? [1 2 3 4])
+;; some doens't have a ? at the end because, the return value of some 
+;; is not boolean, instead it returns the fisrt logical true element of the list
+;; so its invicible when used with even? and odd? which returns 
+;; true and false,
+;; here is an example, that proves how some works. 
+
+(some identity [nil :first nil :second])
+;; returns first
+
+;; how do you check if something is present in a list or not. 
+;; best way is to use some with seq I guess. 
+(some #{3} [1 2 ]) ;; returns nil, else return 3 if 3 was present.
+
+;; there is not every and not any as well in clojure
+
+;; transforming sequence
 
 
 
