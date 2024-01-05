@@ -170,3 +170,68 @@
     (recur (conj result x) (dec x))))
 
 
+
+;; UNIFYING DATA SEQUENCE 
+;; -----------------------
+;; -----------------------
+;; -----------------------
+;; -----------------------
+;; -----------------------
+
+;; prgrams manipulate data. 
+;; atl lowest level these data are list, vector, string, trees etc. 
+;; at highest level it can be XML(tree), Database result (vector) , 
+;; files (tree)
+
+;; in clojure all datastructure can be accessed through single abstraction. 
+;; that is SEQUENCE
+
+;; collections that can be viewed as seqs are called seqable.
+;; java collection, clojure collection, java arrays and string, 
+;; regular expression, directory structure, I/O stream, XML trees
+
+;; avoid loops as much as possible. 
+
+;; (cons element sequence) ;; adds element in front of the sequence. 
+;; seq function will return nill if the column is empty. 
+;; if you want to check whether a column is empty, then use this. 
+(not (seq '())) ;; this will return true;
+
+;; when you use, rest, cons over a vector, the result is a seq
+(seq? (rest [1 2 3])) ;; return true;
+
+;; set is not sorted in clojure, 
+;; if order is important, then you can use, sorted-set & elements) 
+(sorted-set :the :quick :brown :fox)
+;; likewise, there is sorted map for the same thing to be achieved. 
+
+;; (conj coll & elements) 
+;; (into to-seq from-seq)
+
+;; for vectors it adds the element at the back.o
+
+;; iterate functions begings with a value x and continues forever.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
