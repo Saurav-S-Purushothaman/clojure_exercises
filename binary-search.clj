@@ -16,3 +16,4 @@
 (def vecs [1 2 3 4 5 6])
 (def x (binary-search vecs 4))
 (str "The value of x is " x )
+

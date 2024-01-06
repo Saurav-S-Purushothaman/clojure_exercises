@@ -280,24 +280,47 @@
 ;; there is not every and not any as well in clojure
 
 ;; transforming sequence
+;; ---------------------
+;; ---------------------
+;; ---------------------
 
+(map #(format "<p>%s</p>" %) ["this" "that"])
+;; returns ("<p>this</p>" "<p>that</p>")
 
+;; map can also take more than one function. 
+(map #(format "<%s>%s<%s>" %1 %2 %1) ["h1" "h2"] ["this" "that"])
+;; returns ("<h1>this<h1>" "<h2>that<h2>")
 
+;; reduce, f -> function of two arguments, 
+;; it applies the f on first two element. 
+;; then continues to apply the result with the next element. 
+;; repeats until the list is completed. 
 
+(reduce + (range 10))
 
+;; list comprehension = grandaddy of all list transformation.
+;; it consist of 
+;; input list 
+;; a binding for each element of the input list. 
+;; a predicate on the input list
+;; at last the output. 
 
+;; (for [bindfing-form coll-expr filter-expr?] expr)
 
+(def my-vec ["the" "quick" "brown" "fox"])
+(for [word my-vec] 
+  (format "<p>%s</p>" word))
 
+(def whole-numbers (iterate inc 0))
+(take 5 (for [ele whole-numbers :when (even? ele)] ele))
 
+;; the real power of for comes when we are using multiple
+;; bindings 
+(for [alpha "ABCDEFGH" rank (range 1 9)]
+  (format "%s%d" alpha rank ))
 
+;; try to be lazy almost
+;; string can be serialized in clojure I guess. Not sure though. 
 
-
-
-
-
-
-
-
-
-
+;; let me right some python code here. 
 
