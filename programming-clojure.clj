@@ -322,5 +322,53 @@
 ;; try to be lazy almost
 ;; string can be serialized in clojure I guess. Not sure though. 
 
-;; let me right some python code here. 
+;; clojure makes java seqable. 
+;; in java world, collection api, regular expression, xml, file explorer, everything are 
+;; seqable. 
 
+(first (.getBytes "Hellow")) ;; returns 72
+(rest (.getBytes "Hello"))
+;; returns (101 108 108 111)
+(cons (int \h) (rest (.getBytes "Hello")))
+;; returns (104 101 108 108 111)
+
+; system.getPorperties returns a hashtable, 
+;; hashtable and maps are also seqable. 
+(rest (System/getProperties))
+
+;; clojure automatically converts elements into sequence while applying function. 
+;; if you want to convert back, then you have to manually do it. 
+;; for instance the idiomatic way of converting string back to string is by using apply str function. 
+(apply str (reverse "Saurav"))
+
+
+;; Don't do this 
+(re-find #"\w+" "Hello world") ;; this is lazy, 
+;; you can use loop to make it not lazy. 
+;; however there is a better way to do this.
+(re-seq #"\w+" "Hello world")
+;; returns ("Hello" "world")
+
+;; working with file system in clojure. 
+(import 'java.io.File)
+
+;; java code. 
+;; String pathTofile = ".";
+;; File directory = new File(pathTofile);
+;; File [] files = directory.listFiles(); 
+
+(map #(.getName %)  (seq(.listFiles (File. "."))))
+;; instead of this you can directly use this 
+(map #(.getName %)  (.listFiles (File. ".")))
+
+; if you want to recursively walk through the whole directory, ]
+;; clojure provides a fileseek option here as well.
+;(file-seq (File. "."))
+(count (file-seq (File. ".")))
+
+(defn minutes-to-millis [mins] (* mins 1000 60))
+(defn recently-modified? [file]
+(> (.lastModified file)
+(- (System/currentTimeMillis) (minutes-to-millis 30))))
+;; this code shows the recently modified files in the text. 
+;

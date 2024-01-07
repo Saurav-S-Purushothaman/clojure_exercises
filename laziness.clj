@@ -33,5 +33,11 @@
 ;; NOTE: if cycle is not handled, then the system will crash
 
 ;; the rest function will return a lazy sequence when it is operated on a lazy sequence
-(take 5 (rest (cycle ["big" "small"])))
+
+
+
+
+
+
+
 
