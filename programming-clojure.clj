@@ -371,4 +371,78 @@
 (> (.lastModified file)
 (- (System/currentTimeMillis) (minutes-to-millis 30))))
 ;; this code shows the recently modified files in the text. 
-;
+(filter recently-modified? (file-seq (File. ".")))
+
+
+;; let me read this code now. 
+(defn recently-modif? [file]
+  (.lastModified file (System/currentTimeMillis) (minutes-to-millis 30)))
+
+(require '[clojure.java.io :refer [reader]])
+;; lets just learn to use clojure and java reader library to read file, 
+;; uri or url.
+
+(with-open [rdr (reader "basics.clj")]
+  (count (line-seq rdr)))
+
+;; lets count all 
+(with-open [rdr (reader "basics.clj")]
+  (count (filter #(re-find #"\S" %) (line-seq rdr))))
+
+
+;; lets do the following taks. 
+;; a function to check non-blanc line. 
+(use '[clojure.string :only (blank?)])
+(defn non-blank? [line] (not (blank? line)))
+
+;; a function to check if the file type is .svn 
+(defn non-svn? [file] (not (.contains (.toString file) ".svn")))
+
+;; a function to check if the file is clojure file ".clj"
+(defn clojure-source? [file] (.endsWith (.toString file) ".clj"))
+
+;; then clojure.ioc functions that counts the lines of clojure code in a directory. 
+(defn clojure-ioc [directory]
+  (reduce + 
+          (for [file (file-seq directory)
+                :when (and (non-svn? file) (clojure-source? file))]
+            (with-open [rdr (reader file)]
+              (count (filter non-blank? (line-seq rdr)))))))
+
+
+
+(defn clojure-loc [base-file]
+  (reduce
+  +
+  (for [file (file-seq base-file)
+    :when (and (clojure-source? file) (non-svn? file))]
+      (with-open [rdr (reader file)]
+        (count (filter non-blank? (line-seq rdr)))))))
+
+(clojure-ioc (java.io.File. "./serpant_talk"))
+
+;; important thing about clojure sets. 
+;; it can behave as a relational database as relational algebra is possible in it. 
+;; firstly lets create a relational database first. 
+
+(def compositions
+  #{{:name "The Art of the Fugue" :composer "J. S. Bach"}
+  {:name "Musical Offering" :composer "J. S. Bach"}
+  {:name "Requiem" :composer "Giuseppe Verdi"}
+  {:name "Requiem" :composer "W. A. Mozart"}})
+
+(def composers
+  #{{:composer "J. S. Bach" :country "Germany"}
+  {:composer "W. A. Mozart" :country "Austria"}
+  {:composer "Giuseppe Verdi" :country "Italy"}})
+
+(def nations
+  #{{:nation "Germany" :language "German"}
+  {:nation "Austria" :language "German"}
+  {:nation "Italy" :language "Italian"}})
+
+;; set functions that can be used inside This
+;; select  - select is like where clause gives all rows
+;; project - is like the actual select statement. 
+;; there are commands to join sets .
+;; update set

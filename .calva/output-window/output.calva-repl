@@ -1,0 +1,149 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Connecting using "undefined" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Aborting jack-in. No project type selected.
+; Jacking in...
+Hello world
+nil
+clj꞉user꞉> 
+; Connecting using "Babashka" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /home/saurav/clojure ; bb --nrepl-server 33307 ; popd
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "nbb" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /home/saurav/clojure ; npx nbb nrepl-server :port 38979 ; popd
+; Using host:port 127.0.0.1:38979 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉> 
+clj꞉user꞉> 
+; Creating cljs repl session...
+; Connecting cljs repl: nbb...
+;   The Calva Connection Log might have more connection progress information.
+; Connected session: cljs
+; TIPS: You can choose which REPL to use (clj or cljs):
+;    *Calva: Toggle REPL connection*
+;    (There is a button in the status bar for this)
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.cljs'
+; Could not find namespace: cljs.repl
+cljs꞉user꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+cljs꞉user꞉> 
+Just checking this
+nil
+clj꞉user꞉> 
+Just checking this
+nil
+clj꞉user꞉> 
+Just checking this
+nil
+clj꞉user꞉> 
+Just checking this
+nil
+clj꞉user꞉> 
+Just checking this
+nil
+clj꞉user꞉> 
+Just checking this
+nil
+clj꞉user꞉> 
+Just checking this
+nil
+clj꞉user꞉> 
+Just checking this
+nil
+clj꞉user꞉> 
+Just checking this
+nil
+clj꞉user꞉> 
+Just checking this
+nil
+clj꞉user꞉> 
+Just checking this
+nil
+clj꞉user꞉> 
+; Too few arguments to if
+clj꞉user꞉> 
+#'user/fib
+clj꞉user꞉> 
+3
+clj꞉user꞉> 
+; No item -1 in vector of length 2
+clj꞉user꞉> 
+#'user/initial-vec
+clj꞉user꞉> 
+; Could not resolve symbol: intial-vec
+clj꞉user꞉> 
+; No item -1 in vector of length 2
+clj꞉user꞉> 
+#'user/fib
+clj꞉user꞉> 
+#'user/fib
+clj꞉user꞉> 
+1
+clj꞉user꞉> 
+0
+clj꞉user꞉> 
+[0 1 1]
+clj꞉user꞉> 
+[0 1 1 2 4]
+clj꞉user꞉> 
+[0 1 1 2 4 7 11 16 22]
+clj꞉user꞉> 
+; Could not resolve symbol: ele
+clj꞉user꞉> 
+#'user/fib
+clj꞉user꞉> 
+[0 1 1 2 4 7 11 16 22]
+clj꞉user꞉> 
+#'user/fib2
+clj꞉user꞉> 
+[0 1 1 2 3 5 8 13 21]
+clj꞉user꞉> 
+#'user/fib
+clj꞉user꞉> 
+[0 1 1 1 1 1 1 1 1]
+clj꞉user꞉> 
+#'user/fib
+clj꞉user꞉> 
+#'user/fib
+clj꞉user꞉> 
+[0 1 1 2 3 5 8 13 21]
+clj꞉user꞉> 
+9
+clj꞉user꞉> 
+[0 1 1 2 3 5 8 13 21]
+clj꞉user꞉> 
+[0 1 1 2 3 5 8 13 21]
+clj꞉user꞉> 
+[0 1 1 2 3 5 8 13 21]
+clj꞉user꞉> 
+[0 1 1 2 3 5 8 13 21]
+clj꞉user꞉> 
+[0 1 1 2 3 5 8 13 21]
+clj꞉user꞉> 
+[0 1 1 2 3 5 8 13 21]
+clj꞉user꞉> 
