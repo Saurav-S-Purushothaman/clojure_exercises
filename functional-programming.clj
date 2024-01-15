@@ -100,6 +100,7 @@
 
 ;; creating fibinocci series in clojure
 (defn func-fib [n] (take n (map first (iterate (fn [[a b]] [b (+ a b)]) [0 1]))))
+(func-fib 5)
 
 ;; lets do a coin tose problem 
 ;; [:h :t :h :t :t :h :h]
@@ -206,25 +207,3 @@
 
 ;; best approach to optimize multiple transducers is to use the comp function.
 ;; comps take a set of fns and returns a fn that is composition of all those fns. 
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

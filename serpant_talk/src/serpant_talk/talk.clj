@@ -3,7 +3,7 @@
 
 
 (defn foo
-  "I don't do a whole lot."
+  "I don't do a lot."
   [x]
   (println x "Hello, World!"))
 
@@ -51,8 +51,7 @@
 (macroexpand-1 ('binary-search [1 2 3 4] 12))
 
 
-(defn -main [& args]
-  (println (talk (first args))))
+
 
 (println "Hello world this is so cool")
 
@@ -90,3 +89,10 @@
 (if-nots (> 3 5) (println "Hello world!"))
 
 (/ (+ 1 2) 3)
+
+(defn generate-fib [a b]
+  (lazy-seq
+    (cons a (generate-fib b (+ a b)))))
+
+(def fib-sequence (generate-fib 0 1))
+(take 5 (generate-fib 0 1))
