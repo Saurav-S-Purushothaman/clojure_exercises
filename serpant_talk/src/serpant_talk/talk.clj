@@ -96,3 +96,27 @@
 
 (def fib-sequence (generate-fib 0 1))
 (take 5 (generate-fib 0 1))
+
+
+;; lazy method of fibinocci series. 
+(defn generate-fib [a b]
+  (lazy-seq
+    (cons a (generate-fib b (+ a b)))))
+
+(take 5 (generate-fib 0 1))
+
+;; even lazier method. 
+(defn lazier-lazier-fib [n] 
+  (take n (map first (iterate (fn [[a b]] [b (+ b a)]) [0 1]))))
+
+
+
+
+
+
+
+
+
+
+
+
