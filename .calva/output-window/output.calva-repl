@@ -10,23 +10,41 @@
 ;   - See https://calva.io/connect-sequences/
 ; 
 ; Aborting jack-in. No project type selected.
-; Jacking in...
-Hello world
-nil
-clj꞉user꞉> 
+; Connecting using "undefined" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Aborting connect, error determining connect sequence.
 ; Connecting using "Babashka" project type.
 ; You can make Calva auto-select this.
 ;   - See https://calva.io/connect-sequences/
 ; 
-; Starting Jack-in Terminal: pushd /home/saurav/clojure ; bb --nrepl-server 33307 ; popd
-; nREPL Connection was closed
+; Connecting ...
+; Reading port file: file:///home/saurav/clojure/.bb-nrepl.port ...
+; No nrepl port file found.
+; Jacking in...
+; Connecting using "undefined" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Aborting jack-in. No project type selected.
+; Connecting using "ClojureScript nREPL Server" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Connecting ...
+; Reading port file: file:///home/saurav/clojure/.nrepl-port ...
+; Using host:port localhost:38979 ...
+; Hooking up nREPL sessions ...
+; nREPL connection failed: Error: connect ECONNREFUSED 127.0.0.1:38979
+; Failed connecting.
 ; Jacking in...
 ; Connecting using "nbb" project type.
 ; You can make Calva auto-select this.
 ;   - See https://calva.io/connect-sequences/
 ; 
-; Starting Jack-in Terminal: pushd /home/saurav/clojure ; npx nbb nrepl-server :port 38979 ; popd
-; Using host:port 127.0.0.1:38979 ...
+; Starting Jack-in Terminal: pushd /home/saurav/clojure ; npx nbb nrepl-server :port 46637 ; popd
+; Using host:port 127.0.0.1:46637 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
 ; TIPS:
@@ -38,7 +56,7 @@ clj꞉user꞉> 
 ;   - Clojure lines in stack traces are peekable and clickable.
 ; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
 nil
-clj꞉user꞉> 
+clj꞉user꞉>  ; Use `alt+enter` to evaluate
 clj꞉user꞉> 
 ; Creating cljs repl session...
 ; Connecting cljs repl: nbb...
@@ -52,98 +70,23 @@ clj꞉user꞉> 
 cljs꞉user꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 cljs꞉user꞉> 
-Just checking this
-nil
+; Could not resolve symbol: x
 clj꞉user꞉> 
-Just checking this
-nil
+; Could not resolve symbol: x
 clj꞉user꞉> 
-Just checking this
-nil
+"Hello world"
 clj꞉user꞉> 
-Just checking this
-nil
+#'user/functional-fib
 clj꞉user꞉> 
-Just checking this
-nil
+(0 1)
 clj꞉user꞉> 
-Just checking this
-nil
+(0 1)
 clj꞉user꞉> 
-Just checking this
-nil
+(0 1)
 clj꞉user꞉> 
-Just checking this
-nil
+(0 1)
 clj꞉user꞉> 
-Just checking this
-nil
+(0 1)
 clj꞉user꞉> 
-Just checking this
-nil
-clj꞉user꞉> 
-Just checking this
-nil
-clj꞉user꞉> 
-; Too few arguments to if
-clj꞉user꞉> 
-#'user/fib
-clj꞉user꞉> 
-3
-clj꞉user꞉> 
-; No item -1 in vector of length 2
-clj꞉user꞉> 
-#'user/initial-vec
-clj꞉user꞉> 
-; Could not resolve symbol: intial-vec
-clj꞉user꞉> 
-; No item -1 in vector of length 2
-clj꞉user꞉> 
-#'user/fib
-clj꞉user꞉> 
-#'user/fib
-clj꞉user꞉> 
-1
-clj꞉user꞉> 
-0
-clj꞉user꞉> 
-[0 1 1]
-clj꞉user꞉> 
-[0 1 1 2 4]
-clj꞉user꞉> 
-[0 1 1 2 4 7 11 16 22]
-clj꞉user꞉> 
-; Could not resolve symbol: ele
-clj꞉user꞉> 
-#'user/fib
-clj꞉user꞉> 
-[0 1 1 2 4 7 11 16 22]
-clj꞉user꞉> 
-#'user/fib2
-clj꞉user꞉> 
-[0 1 1 2 3 5 8 13 21]
-clj꞉user꞉> 
-#'user/fib
-clj꞉user꞉> 
-[0 1 1 1 1 1 1 1 1]
-clj꞉user꞉> 
-#'user/fib
-clj꞉user꞉> 
-#'user/fib
-clj꞉user꞉> 
-[0 1 1 2 3 5 8 13 21]
-clj꞉user꞉> 
-9
-clj꞉user꞉> 
-[0 1 1 2 3 5 8 13 21]
-clj꞉user꞉> 
-[0 1 1 2 3 5 8 13 21]
-clj꞉user꞉> 
-[0 1 1 2 3 5 8 13 21]
-clj꞉user꞉> 
-[0 1 1 2 3 5 8 13 21]
-clj꞉user꞉> 
-[0 1 1 2 3 5 8 13 21]
-clj꞉user꞉> 
-[0 1 1 2 3 5 8 13 21]
+#'user/functional-fib
 clj꞉user꞉> 

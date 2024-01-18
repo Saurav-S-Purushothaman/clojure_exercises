@@ -50,11 +50,11 @@
 
 (defn tail-fibo [n]
   (letfn [(fib
-    [current next n]
-      (if (zero? n)
-        current
-         (fib next (+ current next) (dec n))))]
-          (fib 0N 1N n)))
+           [current next n]
+           (if (zero? n)
+             current
+              (fib next (+ current next) (dec n))))]
+         (fib 0N 1N n)))
 
 
 ;; lets talk about lazy seq in clojure
@@ -88,7 +88,7 @@
    (lazy-seq 
      (cons (+ a b) (lazy-in-fib b (+ a b))))))
 
-(take 5 (lazy-in-fib 0 1) )
+(take 5 (lazy-in-fib 0 1))
 (take 5 (lazy-in-fib))
 ;; (take 5 (iterate (fn [[a b]] [b (+ a b)]) [0 1]))
 
@@ -207,3 +207,9 @@
 
 ;; best approach to optimize multiple transducers is to use the comp function.
 ;; comps take a set of fns and returns a fn that is composition of all those fns. 
+
+;;  the key and most important learning from functional programming is this. 
+(defn functional-fib [n]
+  (take n (first (iterate (fn [[a b]] [b (+ a b)]) [0 1]))))
+
+(functional-fib 9)

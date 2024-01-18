@@ -17,3 +17,5 @@
 (def x (binary-search vecs 4))
 (str "The value of x is " x )
 
+
+

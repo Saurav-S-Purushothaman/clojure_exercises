@@ -3,7 +3,7 @@
 
 
 (defn foo
-  "I don't do a lot."
+ "I don't do a lot."
   [x]
   (println x "Hello, World!"))
 
