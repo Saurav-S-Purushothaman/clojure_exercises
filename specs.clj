@@ -66,24 +66,46 @@
 ;; s/tuple each element have its own specs. 
 (s/def ::point (s/tuple float? float?))
 (s/conform ::point [1.3 2.7]) ;; returns true
+(s/conform ::point [1 2])
 
 
+;; validating functions. 
+;; important for generative function testing
 
+;; s/cat - basically concatination. 
+(s/def ::cat-example (s/cat :s string? :i int?))
+(s/valid? ::cat-example ["saurav" 1])
 
+;; s/alt - basically we can have alternate values. 
+(s/def ::cat-example2 (s/alt :k keyword? :i int?))
+(s/conform ::cat-example2 [:foo])
+(s/conform ::cat-example2 [1])
+(s/conform ::cat-example2 [1 :foo]) ;; but this is invalid. 
 
+;; regular experssion style conformation is present. 
+;; s/+ s/? s/*
+(s/def ::oe (s/cat :odds (s/+ odd?) :even (s/? even?)))
+;; one or more odd values with an optional even value at the end is a valid expression.
 
+(s/conform ::oe [1 3 5 6]) ;; this is valid. 
 
+;; we can combine specs. 
+(s/def ::odds (s/+ odd?)) ;; one or more odd numbers is valid. 
+(s/def ::optional-even (s/? even?)) ;; an optional even number is valid
 
+;; combining these 
+(s/def ::oe2 (s/cat :odds ::odds :even ::optional-even))
+;; this is same as the below one. We can combine specs. 
+(s/def ::oe (s/cat :odds (s/+ odd?) :even (s/? even?)))
 
+(s/def ::intersection-args
+  (s/cat :s1 set?
+  :sets (s/* set?)))
 
+;; what this implies is that intersection will have one arg which will be sets
+;; and an another arg which will optional sets. 
 
+;; best way to define a function is define args and ret separately and then use that 
+;; in your function. 
 
-
-
-
-
-
-
-
-
-
+;; lets skip the generative function testing for now. Not able to spin my
