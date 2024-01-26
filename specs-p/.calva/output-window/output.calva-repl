@@ -1,0 +1,181 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Connecting using "deps.edn" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /home/saurav/clojure/specs-p ; clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"1.0.0"},cider/cider-nrepl {:mvn/version,"0.28.5"}}}' -M -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]" ; popd
+; Using host:port localhost:45113 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉>  ; Use `alt+enter` to evaluate
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+nil
+clj꞉specs-p.core꞉> 
+true
+clj꞉specs-p.core꞉> 
+; Syntax error macroexpanding clojure.core/defn at (src/core.clj:6:1).
+; s/and - failed: vector? at: [:fn-tail :arity-n :bodies :params] spec: :clojure.core.specs.alpha/param-list
+; (s/and string? (fn* [p1__7799#] (< (count p1__7799#) 5))) - failed: vector? at: [:fn-tail :arity-1 :params] spec: :clojure.core.specs.alpha/param-list
+clj꞉specs-p.core꞉> 
+; Syntax error macroexpanding clojure.core/defn at (src/core.clj:6:1).
+; s/and - failed: vector? at: [:fn-tail :arity-n :bodies :params] spec: :clojure.core.specs.alpha/param-list
+; (s/and string? (fn* [p1__7801#] (< (count p1__7801#) 5))) - failed: vector? at: [:fn-tail :arity-1 :params] spec: :clojure.core.specs.alpha/param-list
+clj꞉specs-p.core꞉> 
+; Syntax error macroexpanding clojure.core/defn at (src/core.clj:6:1).
+; s/and - failed: vector? at: [:fn-tail :arity-n :bodies :params] spec: :clojure.core.specs.alpha/param-list
+; (s/and string? (fn* [p1__7803#] (< (count p1__7803#) 5))) - failed: vector? at: [:fn-tail :arity-1 :params] spec: :clojure.core.specs.alpha/param-list
+clj꞉specs-p.core꞉> 
+#'specs-p.core/short-string?
+clj꞉specs-p.core꞉> 
+true
+clj꞉specs-p.core꞉> 
+true
+clj꞉specs-p.core꞉> 
+true
+clj꞉specs-p.core꞉> 
+#'specs-p.core/col-of-short-string
+clj꞉specs-p.core꞉> 
+; Syntax error compiling at (src/core.clj:12:1).
+; No such var: s/valid
+clj꞉specs-p.core꞉> 
+; Syntax error compiling at (src/core.clj:12:1).
+; Unable to resolve symbol: col-of-short-string? in this context
+clj꞉specs-p.core꞉> 
+#'specs-p.core/col-of-short-string?
+clj꞉specs-p.core꞉> 
+true
+clj꞉specs-p.core꞉> 
+; Unexpected error (AssertionError) macroexpanding s/or at (src/core.clj:15:30).
+; Assert failed: spec/or expects k1 p1 k2 p2..., where ks are keywords
+; (c/and (even? (count key-pred-forms)) (every? keyword? keys))
+clj꞉specs-p.core꞉> 
+#'specs-p.core/number-or-short-string?
+clj꞉specs-p.core꞉> 
+#'specs-p.core/number-or-short-string?
+clj꞉specs-p.core꞉> 
+#'specs-p.core/coll-of-num-short?
+clj꞉specs-p.core꞉> 
+true
+clj꞉specs-p.core꞉> 
+false
+clj꞉specs-p.core꞉> 
+"that is not true" - failed: (< (count %) 5) in: [3] at: [:short]
+"that is not true" - failed: int? in: [3] at: [:integer]
+nil
+clj꞉specs-p.core꞉> 
+#'specs-p.core/f1-car
+clj꞉specs-p.core꞉> 
+:specs-p.core/f1-car-spec
+clj꞉specs-p.core꞉> 
+false
+clj꞉specs-p.core꞉> 
+false
+clj꞉specs-p.core꞉> 
+false
+clj꞉specs-p.core꞉> 
+#'specs-p.core/f1-car
+clj꞉specs-p.core꞉> 
+:specs-p.core/f1-car-spec
+clj꞉specs-p.core꞉> 
+true
+clj꞉specs-p.core꞉> 
+true
+clj꞉specs-p.core꞉> 
+#'specs-p.core/f1-car
+clj꞉specs-p.core꞉> 
+:specs-p.core/f1-car-spec
+clj꞉specs-p.core꞉> 
+true
+clj꞉specs-p.core꞉> 
+#'specs-p.core/f1-car
+clj꞉specs-p.core꞉> 
+#'specs-p.core/f1-car
+clj꞉specs-p.core꞉> 
+; Unexpected error (AssertionError) macroexpanding s/keys at (src/core.clj:27:3).
+; Assert failed: all keys must be namespace-qualified keywords
+; (every? (fn* [p1__1911#] (c/and (keyword? p1__1911#) (namespace p1__1911#))) (concat req-keys req-un-specs opt opt-un))
+clj꞉specs-p.core꞉> 
+:specs-p.core/f1-car-spec
+clj꞉specs-p.core꞉> 
+true
+clj꞉specs-p.core꞉> 
+:specs-p.core/team
+clj꞉specs-p.core꞉> 
+:specs-p.core/driver
+clj꞉specs-p.core꞉> 
+:specs-p.core/starting-pos
+clj꞉specs-p.core꞉> 
+#'specs-p.core/f1-car
+clj꞉specs-p.core꞉> 
+#'specs-p.core/f1-car
+clj꞉specs-p.core꞉> 
+false
+clj꞉specs-p.core꞉> 
+#'specs-p.core/f1-car
+clj꞉specs-p.core꞉> 
+:specs-p.core/f1-car-spec
+clj꞉specs-p.core꞉> 
+true
+clj꞉specs-p.core꞉> 
+{:team "Mercedez", :driver "Lewis Hamilton", :starting-pos 1, :positions [1 2 3 10]}
+clj꞉specs-p.core꞉> 
+:specs-p.core/positions
+clj꞉specs-p.core꞉> 
+{:team "Mercedez", :driver "Lewis Hamilton", :starting-pos 1, :positions [1 2 3 10]}
+clj꞉specs-p.core꞉> 
+:specs-p.core/f1-car-spec
+clj꞉specs-p.core꞉> 
+{:team "Mercedez", :driver "Lewis Hamilton", :starting-pos 1, :positions [1 2 3 10]}
+clj꞉specs-p.core꞉> 
+#'specs-p.core/scored
+clj꞉specs-p.core꞉> 
+#'specs-p.core/scored?
+clj꞉specs-p.core꞉> 
+false
+clj꞉specs-p.core꞉> 
+#'specs-p.core/f1-car
+clj꞉specs-p.core꞉> 
+true
+clj꞉specs-p.core꞉> 
+specs-p.core/scored?
+clj꞉specs-p.core꞉> 
+true
+clj꞉specs-p.core꞉> 
+; Execution error (ClassCastException) at specs-p.core/scored? (REPL:41).
+; class java.lang.String cannot be cast to class java.lang.Number (java.lang.String and java.lang.Number are in module java.base of loader 'bootstrap')
+clj꞉specs-p.core꞉> 
+nil
+clj꞉specs-p.core꞉> 
+; Execution error (IllegalArgumentException) at specs-p.core/eval7968 (REPL:49).
+; Don't know how to create ISeq from: clojure.lang.Keyword
+clj꞉specs-p.core꞉> 
+[]
+clj꞉specs-p.core꞉> 
+[]
+clj꞉specs-p.core꞉> 
+; Execution error (ClassCastException) at specs-p.core/scored? (REPL:41).
+; class java.lang.String cannot be cast to class java.lang.Number (java.lang.String and java.lang.Number are in module java.base of loader 'bootstrap')
+clj꞉specs-p.core꞉> 
+specs-p.core/scored?
+clj꞉specs-p.core꞉> 
+[]
+clj꞉specs-p.core꞉> 
+[]
+clj꞉specs-p.core꞉> 

@@ -108,4 +108,7 @@
 ;; best way to define a function is define args and ret separately and then use that 
 ;; in your function. 
 
-;; lets skip the generative function testing for now. Not able to spin my
+;; lets skip the generative function testing for now. ot able to spin my
+
+
+
