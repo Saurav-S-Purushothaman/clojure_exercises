@@ -10,7 +10,7 @@
 ;   - See https://calva.io/connect-sequences/
 ; 
 ; Starting Jack-in Terminal: pushd /home/saurav/clojure/specs-p ; clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"1.0.0"},cider/cider-nrepl {:mvn/version,"0.28.5"}}}' -M -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]" ; popd
-; Using host:port localhost:45113 ...
+; Using host:port localhost:46399 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
 ; TIPS:
@@ -26,55 +26,23 @@ clj꞉user꞉>  ; Use `alt+enter` to evaluate
 clj꞉user꞉> 
 ; Jack-in done.
 clj꞉user꞉> 
+()
+clj꞉specs-p.core꞉> 
 nil
 clj꞉specs-p.core꞉> 
 true
-clj꞉specs-p.core꞉> 
-; Syntax error macroexpanding clojure.core/defn at (src/core.clj:6:1).
-; s/and - failed: vector? at: [:fn-tail :arity-n :bodies :params] spec: :clojure.core.specs.alpha/param-list
-; (s/and string? (fn* [p1__7799#] (< (count p1__7799#) 5))) - failed: vector? at: [:fn-tail :arity-1 :params] spec: :clojure.core.specs.alpha/param-list
-clj꞉specs-p.core꞉> 
-; Syntax error macroexpanding clojure.core/defn at (src/core.clj:6:1).
-; s/and - failed: vector? at: [:fn-tail :arity-n :bodies :params] spec: :clojure.core.specs.alpha/param-list
-; (s/and string? (fn* [p1__7801#] (< (count p1__7801#) 5))) - failed: vector? at: [:fn-tail :arity-1 :params] spec: :clojure.core.specs.alpha/param-list
-clj꞉specs-p.core꞉> 
-; Syntax error macroexpanding clojure.core/defn at (src/core.clj:6:1).
-; s/and - failed: vector? at: [:fn-tail :arity-n :bodies :params] spec: :clojure.core.specs.alpha/param-list
-; (s/and string? (fn* [p1__7803#] (< (count p1__7803#) 5))) - failed: vector? at: [:fn-tail :arity-1 :params] spec: :clojure.core.specs.alpha/param-list
 clj꞉specs-p.core꞉> 
 #'specs-p.core/short-string?
 clj꞉specs-p.core꞉> 
 true
 clj꞉specs-p.core꞉> 
-true
-clj꞉specs-p.core꞉> 
-true
-clj꞉specs-p.core꞉> 
-#'specs-p.core/col-of-short-string
-clj꞉specs-p.core꞉> 
-; Syntax error compiling at (src/core.clj:12:1).
-; No such var: s/valid
-clj꞉specs-p.core꞉> 
-; Syntax error compiling at (src/core.clj:12:1).
-; Unable to resolve symbol: col-of-short-string? in this context
-clj꞉specs-p.core꞉> 
 #'specs-p.core/col-of-short-string?
 clj꞉specs-p.core꞉> 
 true
 clj꞉specs-p.core꞉> 
-; Unexpected error (AssertionError) macroexpanding s/or at (src/core.clj:15:30).
-; Assert failed: spec/or expects k1 p1 k2 p2..., where ks are keywords
-; (c/and (even? (count key-pred-forms)) (every? keyword? keys))
-clj꞉specs-p.core꞉> 
-#'specs-p.core/number-or-short-string?
-clj꞉specs-p.core꞉> 
 #'specs-p.core/number-or-short-string?
 clj꞉specs-p.core꞉> 
 #'specs-p.core/coll-of-num-short?
-clj꞉specs-p.core꞉> 
-true
-clj꞉specs-p.core꞉> 
-false
 clj꞉specs-p.core꞉> 
 "that is not true" - failed: (< (count %) 5) in: [3] at: [:short]
 "that is not true" - failed: int? in: [3] at: [:integer]
@@ -82,100 +50,1657 @@ nil
 clj꞉specs-p.core꞉> 
 #'specs-p.core/f1-car
 clj꞉specs-p.core꞉> 
-:specs-p.core/f1-car-spec
-clj꞉specs-p.core꞉> 
-false
-clj꞉specs-p.core꞉> 
-false
-clj꞉specs-p.core꞉> 
-false
-clj꞉specs-p.core꞉> 
-#'specs-p.core/f1-car
-clj꞉specs-p.core꞉> 
-:specs-p.core/f1-car-spec
-clj꞉specs-p.core꞉> 
-true
-clj꞉specs-p.core꞉> 
-true
-clj꞉specs-p.core꞉> 
-#'specs-p.core/f1-car
-clj꞉specs-p.core꞉> 
-:specs-p.core/f1-car-spec
-clj꞉specs-p.core꞉> 
-true
-clj꞉specs-p.core꞉> 
-#'specs-p.core/f1-car
-clj꞉specs-p.core꞉> 
-#'specs-p.core/f1-car
-clj꞉specs-p.core꞉> 
-; Unexpected error (AssertionError) macroexpanding s/keys at (src/core.clj:27:3).
-; Assert failed: all keys must be namespace-qualified keywords
-; (every? (fn* [p1__1911#] (c/and (keyword? p1__1911#) (namespace p1__1911#))) (concat req-keys req-un-specs opt opt-un))
-clj꞉specs-p.core꞉> 
-:specs-p.core/f1-car-spec
-clj꞉specs-p.core꞉> 
-true
-clj꞉specs-p.core꞉> 
-:specs-p.core/team
-clj꞉specs-p.core꞉> 
-:specs-p.core/driver
-clj꞉specs-p.core꞉> 
-:specs-p.core/starting-pos
-clj꞉specs-p.core꞉> 
-#'specs-p.core/f1-car
-clj꞉specs-p.core꞉> 
-#'specs-p.core/f1-car
-clj꞉specs-p.core꞉> 
-false
-clj꞉specs-p.core꞉> 
-#'specs-p.core/f1-car
-clj꞉specs-p.core꞉> 
-:specs-p.core/f1-car-spec
-clj꞉specs-p.core꞉> 
-true
-clj꞉specs-p.core꞉> 
-{:team "Mercedez", :driver "Lewis Hamilton", :starting-pos 1, :positions [1 2 3 10]}
+{:team "Mercedez", :driver "Lewis Hamilton", :starting-pos 1, :positions [25 1 2 3 10]}
 clj꞉specs-p.core꞉> 
 :specs-p.core/positions
 clj꞉specs-p.core꞉> 
-{:team "Mercedez", :driver "Lewis Hamilton", :starting-pos 1, :positions [1 2 3 10]}
-clj꞉specs-p.core꞉> 
-:specs-p.core/f1-car-spec
-clj꞉specs-p.core꞉> 
-{:team "Mercedez", :driver "Lewis Hamilton", :starting-pos 1, :positions [1 2 3 10]}
-clj꞉specs-p.core꞉> 
-#'specs-p.core/scored
-clj꞉specs-p.core꞉> 
 #'specs-p.core/scored?
 clj꞉specs-p.core꞉> 
-false
-clj꞉specs-p.core꞉> 
-#'specs-p.core/f1-car
-clj꞉specs-p.core꞉> 
 true
 clj꞉specs-p.core꞉> 
 specs-p.core/scored?
 clj꞉specs-p.core꞉> 
-true
+[specs-p.core/scored?]
 clj꞉specs-p.core꞉> 
-; Execution error (ClassCastException) at specs-p.core/scored? (REPL:41).
-; class java.lang.String cannot be cast to class java.lang.Number (java.lang.String and java.lang.Number are in module java.base of loader 'bootstrap')
+({:spec
+  #object[clojure.spec.alpha$fspec_impl$reify__2518 0x68bd1c36 "clojure.spec.alpha$fspec_impl$reify__2518@68bd1c36"],
+  :clojure.spec.test.check/ret {:shrunk {:total-nodes-visited 15, :depth 5, :pass? false, :result #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 6, :min-pos 0}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3793ef96 "clojure.spec.alpha$spec_impl$reify__2053@3793ef96"], :clojure.spec.alpha/value {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.test.alpha/args (6 0), :clojure.spec.test.alpha/val {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 6, :min-pos 0}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3793ef96 "clojure.spec.alpha$spec_impl$reify__2053@3793ef96"], :clojure.spec.alpha/value {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.test.alpha/args (6 0), :clojure.spec.test.alpha/val {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 412]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.rose_tree$fmap$fn__6284 invoke "rose_tree.cljc" 77]
+  [clojure.core$map$fn__5935 invoke "core.clj" 2772]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5467 invokeStatic "core.clj" 139]
+  [clojure.core$empty_QMARK_ invokeStatic "core.clj" 6241]
+  [clojure.core$empty_QMARK_ invoke "core.clj" 6241]
+  [clojure.test.check$shrink_loop invokeStatic "check.cljc" 263]
+  [clojure.test.check$shrink_loop invoke "check.cljc" 242]
+  [clojure.test.check$failure invokeStatic "check.cljc" 314]
+  [clojure.test.check$failure invoke "check.cljc" 297]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 228]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}, :result-data #:clojure.test.check.properties{:error #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 6, :min-pos 0}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3793ef96 "clojure.spec.alpha$spec_impl$reify__2053@3793ef96"], :clojure.spec.alpha/value {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.test.alpha/args (6 0), :clojure.spec.test.alpha/val {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 6, :min-pos 0}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3793ef96 "clojure.spec.alpha$spec_impl$reify__2053@3793ef96"], :clojure.spec.alpha/value {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.test.alpha/args (6 0), :clojure.spec.test.alpha/val {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 412]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.rose_tree$fmap$fn__6284 invoke "rose_tree.cljc" 77]
+  [clojure.core$map$fn__5935 invoke "core.clj" 2772]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5467 invokeStatic "core.clj" 139]
+  [clojure.core$empty_QMARK_ invokeStatic "core.clj" 6241]
+  [clojure.core$empty_QMARK_ invoke "core.clj" 6241]
+  [clojure.test.check$shrink_loop invokeStatic "check.cljc" 263]
+  [clojure.test.check$shrink_loop invoke "check.cljc" 242]
+  [clojure.test.check$failure invokeStatic "check.cljc" 314]
+  [clojure.test.check$failure invoke "check.cljc" 297]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 228]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}}, :time-shrinking-ms 2, :smallest [(6 0)]},
+                                :failed-after-ms 4,
+                                :num-tests 9,
+                                :seed 1706285764350,
+                                :fail [(94 16)],
+                                :result #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 94, :min-pos 16}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3793ef96 "clojure.spec.alpha$spec_impl$reify__2053@3793ef96"], :clojure.spec.alpha/value {:args {:last-pos 94, :min-pos 16}, :ret true}, :clojure.spec.test.alpha/args (94 16), :clojure.spec.test.alpha/val {:args {:last-pos 94, :min-pos 16}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 94, :min-pos 16}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3793ef96 "clojure.spec.alpha$spec_impl$reify__2053@3793ef96"], :clojure.spec.alpha/value {:args {:last-pos 94, :min-pos 16}, :ret true}, :clojure.spec.test.alpha/args (94 16), :clojure.spec.test.alpha/val {:args {:last-pos 94, :min-pos 16}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 412]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]},
+                                :result-data #:clojure.test.check.properties{:error #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 94, :min-pos 16}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3793ef96 "clojure.spec.alpha$spec_impl$reify__2053@3793ef96"], :clojure.spec.alpha/value {:args {:last-pos 94, :min-pos 16}, :ret true}, :clojure.spec.test.alpha/args (94 16), :clojure.spec.test.alpha/val {:args {:last-pos 94, :min-pos 16}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 94, :min-pos 16}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3793ef96 "clojure.spec.alpha$spec_impl$reify__2053@3793ef96"], :clojure.spec.alpha/value {:args {:last-pos 94, :min-pos 16}, :ret true}, :clojure.spec.test.alpha/args (94 16), :clojure.spec.test.alpha/val {:args {:last-pos 94, :min-pos 16}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 412]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}},
+                                :failing-size 8,
+                                :pass? false},
+  :sym specs-p.core/scored?,
+  :failure #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 6, :min-pos 0}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3793ef96 "clojure.spec.alpha$spec_impl$reify__2053@3793ef96"], :clojure.spec.alpha/value {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.test.alpha/args (6 0), :clojure.spec.test.alpha/val {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 6, :min-pos 0}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3793ef96 "clojure.spec.alpha$spec_impl$reify__2053@3793ef96"], :clojure.spec.alpha/value {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.test.alpha/args (6 0), :clojure.spec.test.alpha/val {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 412]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.rose_tree$fmap$fn__6284 invoke "rose_tree.cljc" 77]
+  [clojure.core$map$fn__5935 invoke "core.clj" 2772]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5467 invokeStatic "core.clj" 139]
+  [clojure.core$empty_QMARK_ invokeStatic "core.clj" 6241]
+  [clojure.core$empty_QMARK_ invoke "core.clj" 6241]
+  [clojure.test.check$shrink_loop invokeStatic "check.cljc" 263]
+  [clojure.test.check$shrink_loop invoke "check.cljc" 242]
+  [clojure.test.check$failure invokeStatic "check.cljc" 314]
+  [clojure.test.check$failure invoke "check.cljc" 297]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 228]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}})
 clj꞉specs-p.core꞉> 
-nil
-clj꞉specs-p.core꞉> 
-; Execution error (IllegalArgumentException) at specs-p.core/eval7968 (REPL:49).
-; Don't know how to create ISeq from: clojure.lang.Keyword
-clj꞉specs-p.core꞉> 
-[]
-clj꞉specs-p.core꞉> 
-[]
-clj꞉specs-p.core꞉> 
-; Execution error (ClassCastException) at specs-p.core/scored? (REPL:41).
-; class java.lang.String cannot be cast to class java.lang.Number (java.lang.String and java.lang.Number are in module java.base of loader 'bootstrap')
+({:spec
+  #object[clojure.spec.alpha$fspec_impl$reify__2518 0x68bd1c36 "clojure.spec.alpha$fspec_impl$reify__2518@68bd1c36"],
+  :clojure.spec.test.check/ret {:shrunk {:total-nodes-visited 15, :depth 4, :pass? false, :result #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 6, :min-pos 0}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3793ef96 "clojure.spec.alpha$spec_impl$reify__2053@3793ef96"], :clojure.spec.alpha/value {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.test.alpha/args (6 0), :clojure.spec.test.alpha/val {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 6, :min-pos 0}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3793ef96 "clojure.spec.alpha$spec_impl$reify__2053@3793ef96"], :clojure.spec.alpha/value {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.test.alpha/args (6 0), :clojure.spec.test.alpha/val {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 412]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.rose_tree$fmap$fn__6284 invoke "rose_tree.cljc" 77]
+  [clojure.core$map$fn__5935 invoke "core.clj" 2772]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5467 invokeStatic "core.clj" 139]
+  [clojure.core$empty_QMARK_ invokeStatic "core.clj" 6241]
+  [clojure.core$empty_QMARK_ invoke "core.clj" 6241]
+  [clojure.test.check$shrink_loop invokeStatic "check.cljc" 263]
+  [clojure.test.check$shrink_loop invoke "check.cljc" 242]
+  [clojure.test.check$failure invokeStatic "check.cljc" 314]
+  [clojure.test.check$failure invoke "check.cljc" 297]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 228]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}, :result-data #:clojure.test.check.properties{:error #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 6, :min-pos 0}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3793ef96 "clojure.spec.alpha$spec_impl$reify__2053@3793ef96"], :clojure.spec.alpha/value {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.test.alpha/args (6 0), :clojure.spec.test.alpha/val {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 6, :min-pos 0}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3793ef96 "clojure.spec.alpha$spec_impl$reify__2053@3793ef96"], :clojure.spec.alpha/value {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.test.alpha/args (6 0), :clojure.spec.test.alpha/val {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 412]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.rose_tree$fmap$fn__6284 invoke "rose_tree.cljc" 77]
+  [clojure.core$map$fn__5935 invoke "core.clj" 2772]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5467 invokeStatic "core.clj" 139]
+  [clojure.core$empty_QMARK_ invokeStatic "core.clj" 6241]
+  [clojure.core$empty_QMARK_ invoke "core.clj" 6241]
+  [clojure.test.check$shrink_loop invokeStatic "check.cljc" 263]
+  [clojure.test.check$shrink_loop invoke "check.cljc" 242]
+  [clojure.test.check$failure invokeStatic "check.cljc" 314]
+  [clojure.test.check$failure invoke "check.cljc" 297]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 228]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}}, :time-shrinking-ms 3, :smallest [(6 0)]},
+                                :failed-after-ms 3,
+                                :num-tests 7,
+                                :seed 1706285769073,
+                                :fail [(20 1)],
+                                :result #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 20, :min-pos 1}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3793ef96 "clojure.spec.alpha$spec_impl$reify__2053@3793ef96"], :clojure.spec.alpha/value {:args {:last-pos 20, :min-pos 1}, :ret true}, :clojure.spec.test.alpha/args (20 1), :clojure.spec.test.alpha/val {:args {:last-pos 20, :min-pos 1}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 20, :min-pos 1}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3793ef96 "clojure.spec.alpha$spec_impl$reify__2053@3793ef96"], :clojure.spec.alpha/value {:args {:last-pos 20, :min-pos 1}, :ret true}, :clojure.spec.test.alpha/args (20 1), :clojure.spec.test.alpha/val {:args {:last-pos 20, :min-pos 1}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 412]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]},
+                                :result-data #:clojure.test.check.properties{:error #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 20, :min-pos 1}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3793ef96 "clojure.spec.alpha$spec_impl$reify__2053@3793ef96"], :clojure.spec.alpha/value {:args {:last-pos 20, :min-pos 1}, :ret true}, :clojure.spec.test.alpha/args (20 1), :clojure.spec.test.alpha/val {:args {:last-pos 20, :min-pos 1}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 20, :min-pos 1}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3793ef96 "clojure.spec.alpha$spec_impl$reify__2053@3793ef96"], :clojure.spec.alpha/value {:args {:last-pos 20, :min-pos 1}, :ret true}, :clojure.spec.test.alpha/args (20 1), :clojure.spec.test.alpha/val {:args {:last-pos 20, :min-pos 1}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 412]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}},
+                                :failing-size 6,
+                                :pass? false},
+  :sym specs-p.core/scored?,
+  :failure #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 6, :min-pos 0}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3793ef96 "clojure.spec.alpha$spec_impl$reify__2053@3793ef96"], :clojure.spec.alpha/value {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.test.alpha/args (6 0), :clojure.spec.test.alpha/val {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 6, :min-pos 0}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3793ef96 "clojure.spec.alpha$spec_impl$reify__2053@3793ef96"], :clojure.spec.alpha/value {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.test.alpha/args (6 0), :clojure.spec.test.alpha/val {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 412]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.rose_tree$fmap$fn__6284 invoke "rose_tree.cljc" 77]
+  [clojure.core$map$fn__5935 invoke "core.clj" 2772]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5467 invokeStatic "core.clj" 139]
+  [clojure.core$empty_QMARK_ invokeStatic "core.clj" 6241]
+  [clojure.core$empty_QMARK_ invoke "core.clj" 6241]
+  [clojure.test.check$shrink_loop invokeStatic "check.cljc" 263]
+  [clojure.test.check$shrink_loop invoke "check.cljc" 242]
+  [clojure.test.check$failure invokeStatic "check.cljc" 314]
+  [clojure.test.check$failure invoke "check.cljc" 297]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 228]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}})
 clj꞉specs-p.core꞉> 
 specs-p.core/scored?
 clj꞉specs-p.core꞉> 
-[]
+({:spec
+  #object[clojure.spec.alpha$fspec_impl$reify__2518 0x16b25cd4 "clojure.spec.alpha$fspec_impl$reify__2518@16b25cd4"],
+  :clojure.spec.test.check/ret {:shrunk {:total-nodes-visited 15, :depth 4, :pass? false, :result #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 6, :min-pos 0}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x473da03d "clojure.spec.alpha$spec_impl$reify__2053@473da03d"], :clojure.spec.alpha/value {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.test.alpha/args (6 0), :clojure.spec.test.alpha/val {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 6, :min-pos 0}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x473da03d "clojure.spec.alpha$spec_impl$reify__2053@473da03d"], :clojure.spec.alpha/value {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.test.alpha/args (6 0), :clojure.spec.test.alpha/val {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 412]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.rose_tree$fmap$fn__6284 invoke "rose_tree.cljc" 77]
+  [clojure.core$map$fn__5935 invoke "core.clj" 2772]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5467 invokeStatic "core.clj" 139]
+  [clojure.core$empty_QMARK_ invokeStatic "core.clj" 6241]
+  [clojure.core$empty_QMARK_ invoke "core.clj" 6241]
+  [clojure.test.check$shrink_loop invokeStatic "check.cljc" 263]
+  [clojure.test.check$shrink_loop invoke "check.cljc" 242]
+  [clojure.test.check$failure invokeStatic "check.cljc" 314]
+  [clojure.test.check$failure invoke "check.cljc" 297]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 228]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}, :result-data #:clojure.test.check.properties{:error #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 6, :min-pos 0}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x473da03d "clojure.spec.alpha$spec_impl$reify__2053@473da03d"], :clojure.spec.alpha/value {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.test.alpha/args (6 0), :clojure.spec.test.alpha/val {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 6, :min-pos 0}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x473da03d "clojure.spec.alpha$spec_impl$reify__2053@473da03d"], :clojure.spec.alpha/value {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.test.alpha/args (6 0), :clojure.spec.test.alpha/val {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 412]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.rose_tree$fmap$fn__6284 invoke "rose_tree.cljc" 77]
+  [clojure.core$map$fn__5935 invoke "core.clj" 2772]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5467 invokeStatic "core.clj" 139]
+  [clojure.core$empty_QMARK_ invokeStatic "core.clj" 6241]
+  [clojure.core$empty_QMARK_ invoke "core.clj" 6241]
+  [clojure.test.check$shrink_loop invokeStatic "check.cljc" 263]
+  [clojure.test.check$shrink_loop invoke "check.cljc" 242]
+  [clojure.test.check$failure invokeStatic "check.cljc" 314]
+  [clojure.test.check$failure invoke "check.cljc" 297]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 228]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}}, :time-shrinking-ms 2, :smallest [(6 0)]},
+                                :failed-after-ms 1,
+                                :num-tests 7,
+                                :seed 1706285889036,
+                                :fail [(17 3)],
+                                :result #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 17, :min-pos 3}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x473da03d "clojure.spec.alpha$spec_impl$reify__2053@473da03d"], :clojure.spec.alpha/value {:args {:last-pos 17, :min-pos 3}, :ret true}, :clojure.spec.test.alpha/args (17 3), :clojure.spec.test.alpha/val {:args {:last-pos 17, :min-pos 3}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 17, :min-pos 3}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x473da03d "clojure.spec.alpha$spec_impl$reify__2053@473da03d"], :clojure.spec.alpha/value {:args {:last-pos 17, :min-pos 3}, :ret true}, :clojure.spec.test.alpha/args (17 3), :clojure.spec.test.alpha/val {:args {:last-pos 17, :min-pos 3}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 412]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]},
+                                :result-data #:clojure.test.check.properties{:error #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 17, :min-pos 3}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x473da03d "clojure.spec.alpha$spec_impl$reify__2053@473da03d"], :clojure.spec.alpha/value {:args {:last-pos 17, :min-pos 3}, :ret true}, :clojure.spec.test.alpha/args (17 3), :clojure.spec.test.alpha/val {:args {:last-pos 17, :min-pos 3}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 17, :min-pos 3}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x473da03d "clojure.spec.alpha$spec_impl$reify__2053@473da03d"], :clojure.spec.alpha/value {:args {:last-pos 17, :min-pos 3}, :ret true}, :clojure.spec.test.alpha/args (17 3), :clojure.spec.test.alpha/val {:args {:last-pos 17, :min-pos 3}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 412]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}},
+                                :failing-size 6,
+                                :pass? false},
+  :sym specs-p.core/scored?,
+  :failure #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 6, :min-pos 0}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x473da03d "clojure.spec.alpha$spec_impl$reify__2053@473da03d"], :clojure.spec.alpha/value {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.test.alpha/args (6 0), :clojure.spec.test.alpha/val {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:fn], :pred (clojure.core/fn [{:keys [args ret]}] (clojure.core/let [last-pos (:last-pos args)] (clojure.core/< last-pos 6))), :val {:args {:last-pos 6, :min-pos 0}, :ret true}, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x473da03d "clojure.spec.alpha$spec_impl$reify__2053@473da03d"], :clojure.spec.alpha/value {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.test.alpha/args (6 0), :clojure.spec.test.alpha/val {:args {:last-pos 6, :min-pos 0}, :ret true}, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 412]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.rose_tree$fmap$fn__6284 invoke "rose_tree.cljc" 77]
+  [clojure.core$map$fn__5935 invoke "core.clj" 2772]
+  [clojure.lang.LazySeq sval "LazySeq.java" 42]
+  [clojure.lang.LazySeq seq "LazySeq.java" 51]
+  [clojure.lang.RT seq "RT.java" 535]
+  [clojure.core$seq__5467 invokeStatic "core.clj" 139]
+  [clojure.core$empty_QMARK_ invokeStatic "core.clj" 6241]
+  [clojure.core$empty_QMARK_ invoke "core.clj" 6241]
+  [clojure.test.check$shrink_loop invokeStatic "check.cljc" 263]
+  [clojure.test.check$shrink_loop invoke "check.cljc" 242]
+  [clojure.test.check$failure invokeStatic "check.cljc" 314]
+  [clojure.test.check$failure invoke "check.cljc" 297]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 228]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}})
 clj꞉specs-p.core꞉> 
-[]
+specs-p.core/scored?
+clj꞉specs-p.core꞉> 
+({:spec
+  #object[clojure.spec.alpha$fspec_impl$reify__2518 0x741a0dba "clojure.spec.alpha$fspec_impl$reify__2518@741a0dba"],
+  :clojure.spec.test.check/ret {:shrunk {:total-nodes-visited 0, :depth 0, :pass? false, :result #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x584db904 "clojure.spec.alpha$spec_impl$reify__2053@584db904"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x584db904 "clojure.spec.alpha$spec_impl$reify__2053@584db904"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 408]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}, :result-data #:clojure.test.check.properties{:error #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x584db904 "clojure.spec.alpha$spec_impl$reify__2053@584db904"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x584db904 "clojure.spec.alpha$spec_impl$reify__2053@584db904"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 408]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}}, :time-shrinking-ms 0, :smallest [(0 0)]},
+                                :failed-after-ms 0,
+                                :num-tests 1,
+                                :seed 1706285926163,
+                                :fail [(0 0)],
+                                :result #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x584db904 "clojure.spec.alpha$spec_impl$reify__2053@584db904"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x584db904 "clojure.spec.alpha$spec_impl$reify__2053@584db904"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 408]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]},
+                                :result-data #:clojure.test.check.properties{:error #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x584db904 "clojure.spec.alpha$spec_impl$reify__2053@584db904"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x584db904 "clojure.spec.alpha$spec_impl$reify__2053@584db904"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 408]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}},
+                                :failing-size 0,
+                                :pass? false},
+  :sym specs-p.core/scored?,
+  :failure #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x584db904 "clojure.spec.alpha$spec_impl$reify__2053@584db904"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x584db904 "clojure.spec.alpha$spec_impl$reify__2053@584db904"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 408]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}})
+clj꞉specs-p.core꞉> 
+(clojure.java.shell/sh "clear")
+{:exit 1, :out "", :err "TERM environment variable not set.\n"}
+clj꞉specs-p.core꞉> 
+specs-p.core/scored?
+clj꞉specs-p.core꞉> 
+({:spec
+  #object[clojure.spec.alpha$fspec_impl$reify__2518 0x2bd461c9 "clojure.spec.alpha$fspec_impl$reify__2518@2bd461c9"],
+  :clojure.spec.test.check/ret {:shrunk {:total-nodes-visited 0, :depth 0, :pass? false, :result #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3958ef44 "clojure.spec.alpha$spec_impl$reify__2053@3958ef44"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3958ef44 "clojure.spec.alpha$spec_impl$reify__2053@3958ef44"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 408]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}, :result-data #:clojure.test.check.properties{:error #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3958ef44 "clojure.spec.alpha$spec_impl$reify__2053@3958ef44"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3958ef44 "clojure.spec.alpha$spec_impl$reify__2053@3958ef44"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 408]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}}, :time-shrinking-ms 0, :smallest [(0 0)]},
+                                :failed-after-ms 0,
+                                :num-tests 1,
+                                :seed 1706286044210,
+                                :fail [(0 0)],
+                                :result #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3958ef44 "clojure.spec.alpha$spec_impl$reify__2053@3958ef44"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3958ef44 "clojure.spec.alpha$spec_impl$reify__2053@3958ef44"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 408]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]},
+                                :result-data #:clojure.test.check.properties{:error #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3958ef44 "clojure.spec.alpha$spec_impl$reify__2053@3958ef44"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3958ef44 "clojure.spec.alpha$spec_impl$reify__2053@3958ef44"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 408]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}},
+                                :failing-size 0,
+                                :pass? false},
+  :sym specs-p.core/scored?,
+  :failure #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3958ef44 "clojure.spec.alpha$spec_impl$reify__2053@3958ef44"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3958ef44 "clojure.spec.alpha$spec_impl$reify__2053@3958ef44"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 408]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}})
+clj꞉specs-p.core꞉> 
+({:spec
+  #object[clojure.spec.alpha$fspec_impl$reify__2518 0x2bd461c9 "clojure.spec.alpha$fspec_impl$reify__2518@2bd461c9"],
+  :clojure.spec.test.check/ret {:shrunk {:total-nodes-visited 0, :depth 0, :pass? false, :result #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3958ef44 "clojure.spec.alpha$spec_impl$reify__2053@3958ef44"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3958ef44 "clojure.spec.alpha$spec_impl$reify__2053@3958ef44"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 408]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}, :result-data #:clojure.test.check.properties{:error #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3958ef44 "clojure.spec.alpha$spec_impl$reify__2053@3958ef44"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3958ef44 "clojure.spec.alpha$spec_impl$reify__2053@3958ef44"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 408]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}}, :time-shrinking-ms 0, :smallest [(0 0)]},
+                                :failed-after-ms 0,
+                                :num-tests 1,
+                                :seed 1706286066065,
+                                :fail [(0 0)],
+                                :result #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3958ef44 "clojure.spec.alpha$spec_impl$reify__2053@3958ef44"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3958ef44 "clojure.spec.alpha$spec_impl$reify__2053@3958ef44"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 408]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]},
+                                :result-data #:clojure.test.check.properties{:error #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3958ef44 "clojure.spec.alpha$spec_impl$reify__2053@3958ef44"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3958ef44 "clojure.spec.alpha$spec_impl$reify__2053@3958ef44"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 408]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}},
+                                :failing-size 0,
+                                :pass? false},
+  :sym specs-p.core/scored?,
+  :failure #error {
+ :cause "Specification-based check failed"
+ :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3958ef44 "clojure.spec.alpha$spec_impl$reify__2053@3958ef44"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message "Specification-based check failed"
+   :data {:clojure.spec.alpha/problems [{:path [:ret], :pred clojure.core/string?, :val false, :via [], :in []}], :clojure.spec.alpha/spec #object[clojure.spec.alpha$spec_impl$reify__2053 0x3958ef44 "clojure.spec.alpha$spec_impl$reify__2053@3958ef44"], :clojure.spec.alpha/value false, :clojure.spec.test.alpha/args (0 0), :clojure.spec.test.alpha/val false, :clojure.spec.alpha/failure :check-failed}
+   :at [clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]}]
+ :trace
+ [[clojure.spec.test.alpha$explain_check invokeStatic "alpha.clj" 390]
+  [clojure.spec.test.alpha$explain_check invoke "alpha.clj" 388]
+  [clojure.spec.test.alpha$check_call invokeStatic "alpha.clj" 408]
+  [clojure.spec.test.alpha$check_call invoke "alpha.clj" 398]
+  [clojure.spec.test.alpha$quick_check$fn__3088 invoke "alpha.clj" 421]
+  [clojure.lang.AFn applyToHelper "AFn.java" 154]
+  [clojure.lang.AFn applyTo "AFn.java" 144]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.test.check.properties$apply_gen$fn__6945$fn__6946 invoke "properties.cljc" 31]
+  [clojure.test.check.properties$apply_gen$fn__6945 invoke "properties.cljc" 30]
+  [clojure.test.check.rose_tree$fmap invokeStatic "rose_tree.cljc" 77]
+  [clojure.test.check.rose_tree$fmap invoke "rose_tree.cljc" 73]
+  [clojure.test.check.generators$fmap$fn__6413 invoke "generators.cljc" 104]
+  [clojure.test.check.generators$gen_fmap$fn__6387 invoke "generators.cljc" 59]
+  [clojure.test.check.generators$call_gen invokeStatic "generators.cljc" 43]
+  [clojure.test.check.generators$call_gen invoke "generators.cljc" 39]
+  [clojure.test.check$quick_check invokeStatic "check.cljc" 211]
+  [clojure.test.check$quick_check doInvoke "check.cljc" 59]
+  [clojure.lang.RestFn invoke "RestFn.java" 425]
+  [clojure.lang.AFn applyToHelper "AFn.java" 156]
+  [clojure.lang.RestFn applyTo "RestFn.java" 132]
+  [clojure.core$apply invokeStatic "core.clj" 667]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.gen.alpha$quick_check invokeStatic "alpha.clj" 32]
+  [clojure.spec.gen.alpha$quick_check doInvoke "alpha.clj" 30]
+  [clojure.lang.RestFn applyTo "RestFn.java" 137]
+  [clojure.core$apply invokeStatic "core.clj" 671]
+  [clojure.core$apply invoke "core.clj" 662]
+  [clojure.spec.test.alpha$quick_check invokeStatic "alpha.clj" 422]
+  [clojure.spec.test.alpha$quick_check invoke "alpha.clj" 415]
+  [clojure.spec.test.alpha$check_1 invokeStatic "alpha.clj" 448]
+  [clojure.spec.test.alpha$check_1 invoke "alpha.clj" 436]
+  [clojure.spec.test.alpha$check$fn__3107 invoke "alpha.clj" 524]
+  [clojure.core$pmap$fn__8552$fn__8553 invoke "core.clj" 7089]
+  [clojure.core$binding_conveyor_fn$fn__5823 invoke "core.clj" 2047]
+  [clojure.lang.AFn call "AFn.java" 18]
+  [java.util.concurrent.FutureTask run "FutureTask.java" 317]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1144]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 642]
+  [java.lang.Thread run "Thread.java" 1583]]}})
+clj꞉specs-p.core꞉> 
+specs-p.core/scored?
+clj꞉specs-p.core꞉> 
+({:spec
+  #object[clojure.spec.alpha$fspec_impl$reify__2518 0x6f83e82c "clojure.spec.alpha$fspec_impl$reify__2518@6f83e82c"],
+  :clojure.spec.test.check/ret {:result true, :pass? true, :num-tests 1000, :time-elapsed-ms 40, :seed 1706286092623},
+  :sym specs-p.core/scored?})
 clj꞉specs-p.core꞉> 

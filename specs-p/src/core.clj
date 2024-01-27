@@ -1,4 +1,4 @@
-(ns specs-p.core
+(ns core
   (:require [clojure.spec.alpha :as s]
             [clojure.spec.test.alpha :as stest]))
 
@@ -38,18 +38,19 @@
 (s/def ::positions (s/coll-of int?))
 
 ;; lets create a function called position. check if the position is has some value, that is it is scorable. 
-(defn scored? [last-pos min-pos]
+(defn scored?
+  "Checks if scored given point is greater than threshold to get a score."
+  [last-pos min-pos]
   (> last-pos min-pos))
 
-(scored? (first (:positions f1-car)) "10")
+(scored? (first (:positions f1-car)) 10)
 
 ;; now lest spec our function scored. 
 (s/fdef scored?
   :args (s/cat :last-pos int? :min-pos int?)
-  :ret boolean?
-  :fn (fn [{:keys [args ret]}]
-        (let [last-pos (:last-pos args)]
-          (< last-pos 6))))
+  :ret boolean?)
 
 ;; inside the instrument function of clojure, pass the quoted fully qualified function name. 
-(stest/instrument 'specs--p.core/scored?)
+(stest/instrument 'core/scored?)
+(stest/check 'core/scored?)
+

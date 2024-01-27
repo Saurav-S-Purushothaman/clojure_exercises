@@ -110,5 +110,5 @@
 
 ;; lets skip the generative function testing for now. ot able to spin my
 
-
+;; this is not right in a way, we are not losing anything 
 
