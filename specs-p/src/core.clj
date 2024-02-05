@@ -53,4 +53,3 @@
 ;; inside the instrument function of clojure, pass the quoted fully qualified function name. 
 (stest/instrument 'core/scored?)
 (stest/check 'core/scored?)
-

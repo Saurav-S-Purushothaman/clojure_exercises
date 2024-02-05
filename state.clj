@@ -24,3 +24,24 @@
 (defn add-message [msg]
   (dosync (alter messages conj msg)))
 
+;; stm uses multiversion concurrency control
+;; if you do not care if any transaction has altered the state of your object, 
+;; then you can use commute instead of alter. 
+ 
+;; alter uses multiversion concurrency control (mvcc) 
+;; commute doesn't care about the current state. 
+
+;; agent 
+;; once you have created an agent, you can send your agent for an updated task. 
+;; you can see that vars created are global. 
+;; that is for each thread we use, the value stored in vars will be the same. 
+
+;; but we can create thread local binding for vars using the binding macro. 
+;; structurally it looks like a let.
+
+;; vars indented for dynamic bindings are called spatial variables. 
+
+
+
+
+

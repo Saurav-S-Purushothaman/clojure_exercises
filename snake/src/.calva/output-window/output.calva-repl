@@ -1,0 +1,119 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Connecting using "deps.edn" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /home/saurav/clojure/snake/src ; clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"1.0.0"},cider/cider-nrepl {:mvn/version,"0.28.5"}}}' -M -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]" ; popd
+; Using host:port localhost:34207 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉>  ; Use `alt+enter` to evaluate
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+; Syntax error compiling at (snake.clj:14:1).
+; Unable to resolve symbol: import-static in this context
+clj꞉snake꞉> 
+nil
+clj꞉import-static꞉> 
+#'import-static/import-static
+clj꞉import-static꞉> 
+; Syntax error compiling at (snake.clj:14:1).
+; Unable to resolve symbol: import-static in this context
+clj꞉snake꞉> 
+; Syntax error compiling at (snake.clj:14:1).
+; Unable to resolve symbol: import-static in this context
+clj꞉snake꞉> 
+nil
+clj꞉snake꞉> 
+#'snake/VK_UP
+clj꞉snake꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "deps.edn" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /home/saurav/clojure/snake/src ; clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"1.0.0"},cider/cider-nrepl {:mvn/version,"0.28.5"}}}' -M -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]" ; popd
+; Using host:port localhost:39139 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉> 
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+; Syntax error compiling at (snake.clj:14:1).
+; Unable to resolve symbol: import-static in this context
+clj꞉snake꞉> 
+nil
+clj꞉import-static꞉> 
+#'import-static/import-static
+clj꞉import-static꞉> 
+#'snake/VK_UP
+clj꞉snake꞉> 
+nil
+clj꞉snake꞉> 
+#'snake/width
+clj꞉snake꞉> 
+#'snake/height
+clj꞉snake꞉> 
+#'snake/point-szie
+clj꞉snake꞉> 
+#'snake/turn-milis
+clj꞉snake꞉> 
+#'snake/win-length
+clj꞉snake꞉> 
+#'snake/dirs
+clj꞉snake꞉> 
+#'snake/dirs
+clj꞉snake꞉> 
+; Syntax error compiling at (snake.clj:32:8).
+; Unable to resolve symbol: pts in this context
+; 
+; Syntax error reading source at (REPL:32:27).
+; Unmatched delimiter: )
+clj꞉snake꞉> 
+; Syntax error compiling def at (snake.clj:31:1).
+; Too many arguments to def
+clj꞉snake꞉> 
+#'snake/add-points
+clj꞉snake꞉> (map #(* 5 %)
+                  [(2 0) (2 1) 1 1])
+; Execution error (ClassCastException) at snake/eval7850 (REPL:105).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉snake꞉> (* 5 (1 4))
+; Execution error (ClassCastException) at snake/eval7854 (REPL:108).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉snake꞉>(*5 [(1 3)]) 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:0:0).
+; Unable to resolve symbol:   in this context
+clj꞉snake꞉> (* 5 [1 3])
+; Execution error (ClassCastException) at snake/eval7856 (REPL:114).
+; class clojure.lang.PersistentVector cannot be cast to class java.lang.Number (clojure.lang.PersistentVector is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+clj꞉snake꞉> (add-points [10 10] [-1 0])
+[9 10]
+clj꞉snake꞉> 
