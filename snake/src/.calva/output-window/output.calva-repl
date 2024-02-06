@@ -211,3 +211,84 @@ clj꞉snake꞉> 
 clj꞉snake꞉> (turn (create-snake) [0 -1])
 {:body ([1 1]), :dir [0 -1], :type :snake, :color #object[java.awt.Color 0x3eba7c7a "java.awt.Color[r=15,g=160,b=70]"]}
 clj꞉snake꞉> 
+#'snake/reset-game
+clj꞉snake꞉> 
+#'snake/reset-game
+clj꞉snake꞉> 
+; testing reset game
+(def test-snake (ref nil))
+#'snake/test-snake
+clj꞉snake꞉> 
+(def test-apple (ref nil))
+#'snake/test-apple
+clj꞉snake꞉> 
+(reset-game test-apple test-snake)
+nil
+clj꞉snake꞉> 
+@test-apple
+{:body ([1 1]), :dir [1 0], :type :snake, :color #object[java.awt.Color 0x1a385da1 "java.awt.Color[r=15,g=160,b=70]"]}
+clj꞉snake꞉> 
+@test-snake
+{:location [24 41], :color #object[java.awt.Color 0x1d98f761 "java.awt.Color[r=210,g=50,b=90]"], :type :apple}
+clj꞉snake꞉> 
+#'snake/update-direction
+clj꞉snake꞉> (update-direction test-snake [0 1])
+{:location [24 41],
+ :color #object[java.awt.Color 0x1d98f761 "java.awt.Color[r=210,g=50,b=90]"],
+ :type :apple,
+ :dir [0 1]}
+clj꞉snake꞉> 
+#'snake/update-position
+clj꞉snake꞉> 
+#'snake/update-position
+clj꞉snake꞉> (reset-game test-snake test-apple)
+nil
+clj꞉snake꞉> 
+(dosync (alter test-apple assoc :location [1 1]))
+{:location [1 1], :color #object[java.awt.Color 0x7ec359e "java.awt.Color[r=210,g=50,b=90]"], :type :apple}
+clj꞉snake꞉> 
+(update-position
+ test-snake test-apple)
+; Syntax error compiling at (.calva/output-window/output.calva-repl:250:1).
+; Unable to resolve symbol: update-positions in this context
+clj꞉snake꞉> (update-position
+             test-snake test-apple)
+nil
+clj꞉snake꞉> 
+; Syntax error compiling at (snake.clj:104:10).
+; Unable to resolve symbol: apple in this context
+clj꞉snake꞉> 
+#'snake/update-positions
+clj꞉snake꞉> 
+#'snake/fill-point
+clj꞉snake꞉> 
+#'snake/paint
+clj꞉snake꞉> 
+#multifn[paint 0x6365622]
+clj꞉snake꞉> 
+#multifn[paint 0x6365622]
+clj꞉snake꞉> 
+#'snake/game-panel
+clj꞉snake꞉> 
+#multifn[paint 0x6365622]
+clj꞉snake꞉> 
+#multifn[paint 0x6365622]
+clj꞉snake꞉> 
+nil
+clj꞉snake꞉> 
+; Syntax error compiling at (snake.clj:158:8).
+; Unable to resolve symbol: turn-millis in this context
+clj꞉snake꞉> 
+#'snake/turn-millis
+clj꞉snake꞉> 
+#'snake/game
+clj꞉snake꞉> (game)
+[#<Ref@238263f4: 
+   {:body ([1 1]),
+    :dir [1 0],
+    :type :snake,
+    :color #object[java.awt.Color 0x1a639cf "java.awt.Color[r=15,g=160,b=70]"]}>
+ #<Ref@4b0578b7: 
+   {:location [48 2], :color #object[java.awt.Color 0x2378929c "java.awt.Color[r=210,g=50,b=90]"], :type :apple}>
+ #object[javax.swing.Timer 0x4d1602a4 "javax.swing.Timer@4d1602a4"]]
+clj꞉snake꞉> 

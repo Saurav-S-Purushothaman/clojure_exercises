@@ -20,7 +20,7 @@
 (def width 75)
 (def height 50)
 (def point-size 10)
-(def turn-milis 75)
+(def turn-millis 75)
 (def win-length 5)
 (def dirs {VK_LEFT [-1 0]
            VK_RIGHT [1 0]
@@ -77,7 +77,92 @@
   (assoc snake :dir newdir))
 
 ; Mutable model of the game using STM. 
+; mutable states are 
+; game can restart. 
+; every turn snake update its position 
+; if snake eats an apple, new apple is placed. 
+; a snake can turn. 
+
+; reset game 
+(defn reset-game 
+  "To reset the game to its initial state."
+  [snake apple]
+  (dosync (ref-set apple (create-apple))
+          (ref-set snake (create-snake))) nil)
+
+; update directionn. 
+; wrapper around snake. 
+(defn update-direction [snake newdir]
+  (when newdir (dosync (alter snake turn newdir))))
+
+; update-position
+; if snake eats apple, new apple created and snake grows. 
+; otherwise snake simply moves. 
+(defn update-positions [snake apple]
+  (dosync 
+   (if (eats? @snake @apple) 
+     (do (ref-set apple (create-apple))
+         (alter snake move :grow))
+     (alter snake move))) nil)
+
+;; ----------------------
+;; snake gui
+;; ----------------------
+
+(defn fill-point [g pt color]
+  (let [[x y width height] (point-to-screen-rect pt)]
+    (.setColor g color)
+    (.fillRect g x y width height)))
+
+(defmulti paint (fn [g object & _] (:type object)))
+
+(defmethod paint :apple [g {:keys [location color]}]
+  (fill-point g location color))
+
+(defmethod paint :snake [g {:keys [body color]}]
+  (doseq [point body] 
+    (fill-point g point color)))
 
 
+; START: game-panel
+(defn game-panel [frame snake apple]
+  (proxy [JPanel ActionListener KeyListener] []
+    (paintComponent [g] ; <label id="code.game-panel.paintComponent"/>
+      (proxy-super paintComponent g)
+      (paint g @snake)
+      (paint g @apple))
+    (actionPerformed [e] ; <label id="code.game-panel.actionPerformed"/>
+      (update-positions snake apple)
+      (when (lose? @snake)
+	(reset-game snake apple)
+	(JOptionPane/showMessageDialog frame "You lose!"))
+      (when (win? @snake)
+	(reset-game snake apple)
+	(JOptionPane/showMessageDialog frame "You win!"))
+      (.repaint this))
+    (keyPressed [e] ; <label id="code.game-panel.keyPressed"/>
+      (update-direction snake (dirs (.getKeyCode e))))
+    (getPreferredSize [] 
+      (Dimension. (* (inc width) point-size) 
+		  (* (inc height) point-size)))
+    (keyReleased [e])
+    (keyTyped [e])))
+; END: game-panel
 
-
+; START: game
+(defn game [] 
+  (let [snake (ref (create-snake)) ; <label id="code.game.let"/>
+	apple (ref (create-apple))
+	frame (JFrame. "Snake")
+	panel (game-panel frame snake apple)
+	timer (Timer. turn-millis panel)]
+    (doto panel ; <label id="code.game.panel"/>
+      (.setFocusable true)
+      (.addKeyListener panel))
+    (doto frame ; <label id="code.game.frame"/>
+      (.add panel)
+      (.pack)
+      (.setVisible true))
+    (.start timer) ; <label id="code.game.timer"/>
+    [snake, apple, timer])) ; <label id="code.game.return"/>
+; END: game
