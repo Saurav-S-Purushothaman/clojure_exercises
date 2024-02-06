@@ -117,3 +117,97 @@ clj꞉snake꞉> (* 5 [1 3])
 clj꞉snake꞉> (add-points [10 10] [-1 0])
 [9 10]
 clj꞉snake꞉> 
+; Syntax error compiling at (snake.clj:37:9).
+; Unable to resolve symbol: point-size in this context
+clj꞉snake꞉> 
+#'snake/point-szie
+clj꞉snake꞉> 
+#'snake/dirs
+clj꞉snake꞉> 
+; Syntax error compiling at (snake.clj:37:9).
+; Unable to resolve symbol: point-size in this context
+clj꞉snake꞉> 
+; Syntax error compiling at (snake.clj:37:9).
+; Unable to resolve symbol: point-size in this context
+clj꞉snake꞉> 
+#'snake/point-size
+clj꞉snake꞉> 
+#'snake/point-to-screen-rect
+clj꞉snake꞉> 
+#'snake/create-apple
+clj꞉snake꞉> 
+#'snake/create-snake
+clj꞉snake꞉> 
+#'snake/create-snake
+clj꞉snake꞉> 
+#'snake/create-snake
+clj꞉snake꞉> 
+#'snake/move
+clj꞉snake꞉> (move (create-snake))
+{:body ([2 1]), :dir [1 0], :type :snake, :color #object[java.awt.Color 0x262bcd8b "java.awt.Color[r=15,g=160,b=70]"]}
+clj꞉snake꞉> 
+(move (create-snake) :grow)
+{:body ([2 1] [1 1]),
+ :dir [1 0],
+ :type :snake,
+ :color #object[java.awt.Color 0x6378b467 "java.awt.Color[r=15,g=160,b=70]"]}
+clj꞉snake꞉> (move 
+             (move (create-snake) :grow) :grow)
+{:body ([3 1] [2 1] [1 1]),
+ :dir [1 0],
+ :type :snake,
+ :color #object[java.awt.Color 0x14e0fb8a "java.awt.Color[r=15,g=160,b=70]"]}
+;; => Syntax error reading source at (REPL:159:77).
+;;    No reader function for tag object
+
+clj꞉snake꞉> 
+clj꞉snake꞉> 
+; Syntax error reading source at (REPL:159:77).
+; No reader function for tag object
+#'snake/move
+clj꞉snake꞉> 
+#'snake/move
+clj꞉snake꞉> 
+; Syntax error compiling at (snake.clj:63:7).
+; Unable to resolve symbol: body in this context
+clj꞉snake꞉> 
+#'snake/win?
+clj꞉snake꞉> 
+(win? {:body [[1 1]]})
+false
+clj꞉snake꞉> (win? {:body [[1 1] [1 2] [1 3] [1 4] [1 5]]})
+true
+clj꞉snake꞉> 
+#'snake/head-overlaps-body?
+clj꞉snake꞉> 
+#'snake/lose?
+clj꞉snake꞉> 
+(lose? {:body [[1 1] [1 2] [1 3]]})
+false
+clj꞉snake꞉> 
+(lose? {:body [[1 1] [1 2] [1 1]]})
+true
+clj꞉snake꞉> 
+; Syntax error compiling at (snake.clj:73:3).
+; Unable to resolve symbol: sanke-head in this context
+clj꞉snake꞉> 
+#'snake/eat?
+clj꞉snake꞉> (eats? {:body [[1 1] [1 2]]} {:location [2 2]})
+; Syntax error compiling at (.calva/output-window/output.calva-repl:195:13).
+; Unable to resolve symbol: eats? in this context
+clj꞉snake꞉> 
+#'snake/eats?
+clj꞉snake꞉> 
+(eats? {:body [[1 1] [1 2]]} {:location [2 2]})
+false
+clj꞉snake꞉> (eats? {:body [[2 2] [1 2]]} {:location [2 2]})
+false
+clj꞉snake꞉> 
+#'snake/eats?
+clj꞉snake꞉> (eats? {:body [[2 2] [1 2]]} {:location [2 2]})
+true
+clj꞉snake꞉> 
+#'snake/turn
+clj꞉snake꞉> (turn (create-snake) [0 -1])
+{:body ([1 1]), :dir [0 -1], :type :snake, :color #object[java.awt.Color 0x3eba7c7a "java.awt.Color[r=15,g=160,b=70]"]}
+clj꞉snake꞉> 
