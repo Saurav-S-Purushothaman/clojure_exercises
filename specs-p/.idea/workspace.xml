@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6a6b1081-c981-4319-905a-0d8fb06ae67e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.clj-kondo/.cache/v1/clj/user.transit.json" beforeDir="false" afterPath="$PROJECT_DIR$/../.clj-kondo/.cache/v1/clj/user.transit.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.clj-kondo/.cache/v1/cljc/user.transit.json" beforeDir="false" afterPath="$PROJECT_DIR$/../.clj-kondo/.cache/v1/cljc/user.transit.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../functional-programming.clj" beforeDir="false" afterPath="$PROJECT_DIR$/../functional-programming.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snake/src/.nrepl-port" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="DepsProjectDetails">
+    <option name="cachedModuleDetails">
+      <map>
+        <entry key="$PROJECT_DIR$/deps.edn">
+          <value>
+            <ModuleDetails>
+              <option name="details" value="{:basis {:classpath {&quot;test&quot; {:path-key :extra-paths}, &quot;src&quot; {:path-key :paths}, &quot;/home/saurav/.m2/repository/org/clojure/clojure/1.11.1/clojure-1.11.1.jar&quot; {:lib-name org.clojure/clojure}, &quot;/home/saurav/.m2/repository/org/clojure/test.check/1.1.1/test.check-1.1.1.jar&quot; {:lib-name org.clojure/test.check}, &quot;/home/saurav/.m2/repository/org/clojure/core.specs.alpha/0.2.62/core.specs.alpha-0.2.62.jar&quot; {:lib-name org.clojure/core.specs.alpha}, &quot;/home/saurav/.m2/repository/org/clojure/spec.alpha/0.3.218/spec.alpha-0.3.218.jar&quot; {:lib-name org.clojure/spec.alpha}}, :basis-config {:aliases [:test]}, :all-aliases #{:test :deps}, :mvn/repos {&quot;central&quot; {:url &quot;https://repo1.maven.org/maven2/&quot;}, &quot;clojars&quot; {:url &quot;https://repo.clojars.org/&quot;}}, :argmap {:extra-paths [&quot;test&quot;]}, :paths [&quot;src&quot;], :classpath-roots [&quot;test&quot; &quot;src&quot; &quot;/home/saurav/.m2/repository/org/clojure/clojure/1.11.1/clojure-1.11.1.jar&quot; &quot;/home/saurav/.m2/repository/org/clojure/test.check/1.1.1/test.check-1.1.1.jar&quot; &quot;/home/saurav/.m2/repository/org/clojure/core.specs.alpha/0.2.62/core.specs.alpha-0.2.62.jar&quot; &quot;/home/saurav/.m2/repository/org/clojure/spec.alpha/0.3.218/spec.alpha-0.3.218.jar&quot;], :config-paths [&quot;/home/saurav/.deps.clj/1.11.1.1413/ClojureTools/deps.edn&quot; &quot;/home/saurav/.clojure/deps.edn&quot; &quot;/home/saurav/clojure/specs-p/deps.edn&quot;], :alias-scopes {:system #{:test :deps}, :user #{}, :project #{}}, :git-deps #{}, :alias-types {:deps :tool}, :libs {org.clojure/clojure {:mvn/version &quot;1.11.1&quot;, :deps/manifest :mvn, :parents #{[]}, :paths [&quot;/home/saurav/.m2/repository/org/clojure/clojure/1.11.1/clojure-1.11.1.jar&quot;]}, org.clojure/test.check {:mvn/version &quot;1.1.1&quot;, :deps/manifest :mvn, :parents #{[]}, :paths [&quot;/home/saurav/.m2/repository/org/clojure/test.check/1.1.1/test.check-1.1.1.jar&quot;]}, org.clojure/spec.alpha {:mvn/version &quot;0.3.218&quot;, :deps/manifest :mvn, :dependents [org.clojure/clojure], :parents #{[org.clojure/clojure]}, :paths [&quot;/home/saurav/.m2/repository/org/clojure/spec.alpha/0.3.218/spec.alpha-0.3.218.jar&quot;]}, org.clojure/core.specs.alpha {:mvn/version &quot;0.2.62&quot;, :deps/manifest :mvn, :dependents [org.clojure/clojure], :parents #{[org.clojure/clojure]}, :paths [&quot;/home/saurav/.m2/repository/org/clojure/core.specs.alpha/0.2.62/core.specs.alpha-0.2.62.jar&quot;]}}, :aliases {:deps {:replace-paths [], :replace-deps {org.clojure/tools.deps.cli {:mvn/version &quot;0.9.43&quot;}}, :ns-default clojure.tools.deps.cli.api, :ns-aliases {help clojure.tools.deps.cli.help}}, :test {:extra-paths [&quot;test&quot;]}}, :deps {org.clojure/clojure {:mvn/version &quot;1.11.1&quot;}, org.clojure/test.check {:mvn/version &quot;1.1.1&quot;}}}}" />
+              <option name="hash" value="6d3cc20137b45e2439333a0e1a1c9781" />
+            </ModuleDetails>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2c2E9hVzWwTg4HkHAKhrDyuhvUS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/saurav/clojure/snake"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
+      <setting name="bbPath" value="" />
+      <setting name="parameters" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <setting name="workingDir" value="" />
+      <setting name="focusEditor" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="SOCKET" />
+      <setting name="configType" value="SPECIFY" />
+      <setting name="replPortFileType" value="STANDARD" />
+      <setting name="customPortFile" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <setting name="focusEditor" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6a6b1081-c981-4319-905a-0d8fb06ae67e" name="Changes" comment="" />
+      <created>1707301127250</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707301127250</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -211,5 +211,3 @@
 ;;  the key and most important learning from functional programming is this. 
 (defn functional-fib [n]
   (take n (first (iterate (fn [[a b]] [b (+ a b)]) [0 1]))))
-
-(functional-fib 9)

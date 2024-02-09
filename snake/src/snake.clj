@@ -11,6 +11,8 @@
 	   (javax.swing JPanel JFrame Timer JOptionPane)
            (java.awt.event ActionListener KeyListener))
   (:refer import-static :refer :all))
+
+
 (import-static java.awt.event.KeyEvent VK_LEFT VK_RIGHT VK_UP VK_DOWN)
 
 ; TODO: implement the Snake!
@@ -164,5 +166,11 @@
       (.pack)
       (.setVisible true))
     (.start timer) ; <label id="code.game.timer"/>
-    [snake, apple, timer])) ; <label id="code.game.return"/>
+    [snake, apple, timer]))
+; <label id="code.game.return"/>
 ; END: game
+(defn -main
+      "Entry point of the application"
+      [& args]
+      (println "Hello world"))
+
