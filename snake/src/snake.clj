@@ -12,7 +12,6 @@
            (java.awt.event ActionListener KeyListener))
   (:refer import-static :refer :all))
 
-
 (import-static java.awt.event.KeyEvent VK_LEFT VK_RIGHT VK_UP VK_DOWN)
 
 ; TODO: implement the Snake!
