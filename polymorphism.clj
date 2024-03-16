@@ -2,7 +2,7 @@
 
 (defn who-are-you [input]
   (cond
-    (= java.lang.String (class input)) "You are a string" 
+    (= java.lang.String (class input)) "You are a string"
     (= java.lang.Long (class input)) "You are a long"
     (= clojure.lang.Keyword (class input)) "You are keyword"
     :else "I don't know who you are"))
@@ -13,10 +13,10 @@
 (who-are-you 1.2) ;; returns "I don't know who you are"
 
 ;; we can experss the same thing using multimethod.
-;; first we need to specify the multi method and then we need to create function to dispatch the method. 
+;; first we need to specify the multi method and then we need to create function to dispatch the method.
 
 ;; (defmulti name dispatch-fn) -> based on the dispatch function we can create different methods
-(defmulti who class) 
+(defmulti who class)
 
 ;; this is how you create a method
 ;; (defmethod name match
@@ -25,6 +25,9 @@
 
 (defmethod who java.lang.String [args]
   (str "You are string" args))
+
+(defmethod who java.lang.Boolean [args]
+  (str "You are a boolean"))
 
 
 (defmethod who clojure.lang.Keyword [args]
@@ -64,7 +67,7 @@
 
 ;; learn protocol later
 
-;; how do we create a class that has its own field in clojure 
+;; how do we create a class that has its own field in clojure
 ;; the way to do it is by using the defrecord function
 
 (defrecord Mushroom [color height])
@@ -76,4 +79,3 @@
 (str
 (.-color regular-mushroom)
 (.-height regular-mushroom))
-
